@@ -1,0 +1,939 @@
+<!-- ================================================================
+     TAYLOE CAPITAL — /home cinematic page (tc-site-v2)
+     GENERATED FILE — do not edit by hand. Edit ~/tc-site-v2/index.html
+     and re-run:  python3 build-squarespace.py
+
+     Paste this ENTIRE file into ONE Code block on a BLANK page.
+     Assets stream from the free CDN (github.com/hintontayloe/tc-site-assets
+     via jsDelivr) — no Squarespace file uploads required.
+     Full steps: squarespace/INSTRUCTIONS.md
+     ================================================================ -->
+<style>
+  /* ---- Squarespace page takeover (this page only) ---- */
+  #header, .header-announcement-bar-wrapper, .sqs-announcement-bar-dropzone { display: none !important; }
+  #footer-sections, footer.sections { display: none !important; }
+  .cookie-banner-mount-point, .cookie-banner-manager, .manage-cookies-bar, .sqs-cookie-banner-v2 { display: none !important; }
+  #page .page-section { padding: 0 !important; min-height: 0 !important; }
+  #page .content-wrapper { padding: 0 !important; max-width: none !important; }
+  #page .content { width: 100% !important; max-width: none !important; }
+  html { scrollbar-width: none; scroll-snap-type: y mandatory; }
+  html::-webkit-scrollbar { display: none; }
+  body, #siteWrapper { margin: 0; background: #F4F1E6 !important; }
+  body.tcv2-locked { overflow: hidden !important; }
+
+  @font-face{
+    font-family:'Mona Sans';
+    src:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-mona.woff2') format('woff2');
+    font-weight:200 900;font-stretch:75% 125%;font-display:block;
+  }
+  @font-face{
+    font-family:'AntonTC';
+    src:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-anton.ttf') format('truetype');
+    font-weight:400;font-display:block;
+  }
+  #tcv2{
+    --cream:#F4F1E6;
+    --ink:#0C0F0D;
+    --green:#14352A;
+    --hair:rgba(12,15,13,.45);
+  }
+  #tcv2, #tcv2 *{margin:0;padding:0;box-sizing:border-box}
+  
+  
+  
+  
+  
+  #tcv2 ::selection{background:var(--green);color:var(--cream)}
+
+  
+  #tcv2-grain{
+    position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    background-size:280px 280px;
+  }
+
+  
+  #tcv2-progress{
+    position:fixed;top:0;left:0;right:0;height:2px;z-index:60;
+    background:var(--green);
+    transform:scaleX(0);transform-origin:0 50%;
+  }
+
+  
+  #tcv2-store{
+    position:fixed;top:4.5vh;left:8vw;z-index:70;
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;
+    opacity:0;transition:opacity .8s ease,color .3s ease;
+    transform:translate(var(--mx,0px),var(--my,0px));
+  }
+  #tcv2-store.show{opacity:1}
+  #tcv2-store:hover{color:var(--green)}
+  #tcv2-store span{display:inline-block;text-align:center}
+
+  @property --sweep{syntax:'<angle>';initial-value:0deg;inherits:false}
+  #tcv2-brand{
+    position:fixed;top:4.5vh;right:8vw;z-index:70;
+    display:flex;flex-direction:row;align-items:center;gap:10px;
+    color:var(--ink);text-decoration:none;
+    transition:opacity .3s ease;
+    transform:translate(var(--mx,0px),var(--my,0px));
+  }
+  #tcv2-brand:hover{opacity:.6}
+  #tcv2 .logo-draw{
+    width:46px;height:46px;
+    -webkit-mask:conic-gradient(from 200deg,#000 var(--sweep),transparent 0deg);
+            mask:conic-gradient(from 200deg,#000 var(--sweep),transparent 0deg);
+  }
+  #tcv2-brand.go .logo-draw{animation:tcv2-logodraw 1.7s cubic-bezier(.4,0,.25,1) .3s forwards}
+  @keyframes tcv2-logodraw{to{--sweep:360deg}}
+  #tcv2 .logo-ink{
+    width:100%;height:100%;background:var(--ink);
+    -webkit-mask:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-logo.png') center/contain no-repeat;
+            mask:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-logo.png') center/contain no-repeat;
+  }
+  #tcv2 .brand-name{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    font-size:14px;letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  @media (prefers-reduced-motion:reduce){
+    #tcv2 .logo-draw{-webkit-mask:none;mask:none;animation:none}
+  }
+
+  
+  #tcv2-home{
+    position:relative;
+    height:100vh;overflow:hidden;
+    scroll-snap-align:start;scroll-snap-stop:always;
+  }
+  #tcv2-title{
+    position:absolute;top:42vh;left:0;right:0;
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    font-size:min(11.5vw,26vh);
+    line-height:1;text-align:center;white-space:nowrap;
+    color:var(--ink);
+    transform:translateY(-50%) translate(var(--px,0px),var(--py,0px));
+    will-change:transform;
+  }
+  #tcv2-title span{display:inline-block;text-align:center}
+
+  
+  #tcv2 .corner{
+    position:absolute;bottom:39px;
+    font:600 10px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;
+    color:rgba(20,53,42,.6);
+    opacity:0;transition:opacity .8s ease .3s;
+  }
+  #tcv2-home.on .corner{opacity:1}
+  #tcv2 .corner.l{left:8vw}
+  #tcv2 .corner.r{right:8vw}
+  #tcv2 .corner a{color:inherit;text-decoration:none;transition:color .3s ease}
+  #tcv2 .corner a:hover{color:var(--green)}
+
+  #tcv2-hint{
+    position:absolute;left:50%;bottom:36px;
+    transform:translateX(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:14px;
+    color:var(--ink);opacity:0;transition:opacity .8s ease;
+    pointer-events:none;
+  }
+  #tcv2-hint.show{opacity:1}
+  #tcv2-hint span{
+    font:700 13px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.42em;padding-left:.42em;
+  }
+  #tcv2-hint i{
+    display:block;width:15px;height:15px;
+    border-right:2.5px solid var(--green);border-bottom:2.5px solid var(--green);
+    transform:rotate(45deg);
+    animation:tcv2-chev 1.5s ease-in-out infinite;
+  }
+  #tcv2-hint i+i{margin-top:-9px;animation-delay:.18s}
+  @keyframes tcv2-chev{
+    0%{opacity:0;transform:rotate(45deg) translate(-7px,-7px)}
+    40%{opacity:1}
+    75%,100%{opacity:0;transform:rotate(45deg) translate(7px,7px)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    #tcv2-hint i{animation:none;opacity:1}
+  }
+
+  
+  #tcv2-waitlist{
+    position:absolute;left:50%;bottom:28vh;transform:translateX(-50%);
+    width:min(480px,82vw);
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+    opacity:0;visibility:hidden;pointer-events:none;
+    transition:opacity 1.1s ease,visibility 0s 1.1s;
+  }
+  #tcv2-waitlist.show{
+    opacity:1;visibility:visible;pointer-events:auto;
+    transition:opacity 1.1s ease;
+  }
+  #tcv2 .wl-row{
+    position:relative;
+    display:flex;align-items:baseline;gap:20px;width:100%;
+    padding-bottom:12px;
+  }
+  #tcv2 .wl-row::after{
+    content:'';position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:rgba(20,53,42,.45);
+    transform:scaleX(0);
+    transition:transform 1.2s cubic-bezier(.22,.8,.26,1) .3s,background .3s ease;
+  }
+  #tcv2-waitlist.show .wl-row::after{transform:scaleX(1)}
+  #tcv2 .wl-row:focus-within::after{background:var(--green)}
+  #tcv2-waitlist input[type=email]{
+    flex:1;min-width:0;
+    background:none;border:none;outline:none;
+    padding:6px 0;color:var(--ink);
+    font:600 12px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.18em;
+  }
+  #tcv2-waitlist input[type=email]::placeholder{color:rgba(12,15,13,.55);letter-spacing:.3em}
+  #tcv2-waitlist button{
+    background:none;border:none;cursor:pointer;
+    color:var(--ink);
+    font:700 12px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.24em;
+    padding:6px 0;white-space:nowrap;
+    transition:color .3s ease;
+    transform:translate(var(--mx,0px),var(--my,0px));
+  }
+  #tcv2-waitlist button:hover{color:var(--green)}
+  #tcv2-waitlist button b{
+    display:inline-block;margin-left:10px;font-weight:700;
+    color:var(--green);
+    transition:transform .3s cubic-bezier(.2,.6,.2,1);
+  }
+  #tcv2-waitlist button:hover b{transform:translateX(5px)}
+  #tcv2-waitlist [name=hp]{position:absolute;left:-9999px;width:0;height:0;opacity:0}
+  #tcv2-wl-note{
+    font:600 10.5px/1.6 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;
+    min-height:1.6em;opacity:.8;
+    transition:color .3s ease;
+  }
+  #tcv2-wl-note.ok{color:var(--green);opacity:1}
+  @media (max-width:560px){
+    #tcv2 .wl-row{flex-direction:column;align-items:center;gap:16px}
+    #tcv2 .wl-row::after{display:none}
+    #tcv2-waitlist input[type=email]{
+      width:100%;text-align:center;
+      border-bottom:1px solid var(--hair);padding-bottom:12px;
+    }
+  }
+
+  
+  #tcv2-offer{
+    position:relative;
+    height:100vh;overflow:hidden;
+    scroll-snap-align:start;scroll-snap-stop:always;
+    
+  }
+  #tcv2-offer .copy{
+    position:absolute;top:15vh;left:8vw;right:8vw;
+    display:flex;flex-direction:column;gap:26px;
+  }
+  #tcv2-offer .k, #tcv2 .kick{
+    font:600 11px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.34em;text-transform:uppercase;
+    color:var(--green);
+    display:block;
+  }
+  #tcv2-offer .k{
+    opacity:0;transform:translateY(14px);
+    transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.26,1);
+  }
+  #tcv2-offer.in .k{opacity:1;transform:none}
+  #tcv2-offer h1{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(2.4rem,6.4vw,6rem);
+    line-height:1.04;
+    color:var(--ink);
+  }
+  
+  #tcv2-offer h1 .lw{display:block;overflow:hidden}
+  #tcv2-offer h1 .line{
+    display:block;transform:translateY(112%);
+    transition:transform .9s cubic-bezier(.19,.7,.22,1);
+  }
+  #tcv2-offer.in h1 .line{transform:none}
+  #tcv2-offer.in h1 .lw:nth-child(2) .line{transition-delay:.09s}
+  #tcv2-offer.in h1 .lw:nth-child(3) .line{transition-delay:.18s}
+  #tcv2-offer .sub{
+    font:600 11px/1.9 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.34em;text-transform:uppercase;
+    max-width:70ch;
+    opacity:0;transform:translateY(14px);
+    transition:opacity .8s ease .28s,transform .8s cubic-bezier(.22,.8,.26,1) .28s;
+  }
+  #tcv2-offer.in .sub{opacity:.75;transform:none}
+
+  #tcv2 .cta{
+    position:absolute;top:50%;right:8vw;
+    font:700 13px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;white-space:nowrap;
+    padding:27px 52px;
+    background:rgba(12,15,13,0);
+    visibility:hidden;
+    transition:background .35s ease,color .35s ease;
+    transform:translateY(-50%) translate(var(--mx,0px),var(--my,0px));
+  }
+  
+  #tcv2-offer.in .cta{visibility:visible;transition:visibility 0s 1s,background .35s ease,color .35s ease}
+  #tcv2 .cta svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  #tcv2 .cta rect{
+    x:0.5px;y:0.5px;width:calc(100% - 1px);height:calc(100% - 1px);
+    fill:none;stroke:rgba(20,53,42,.75);stroke-width:1;
+    vector-effect:non-scaling-stroke;
+    stroke-dasharray:100;stroke-dashoffset:100;
+  }
+  #tcv2-offer.in .cta rect{animation:tcv2-ctadraw 1.1s cubic-bezier(.4,0,.2,1) 1s forwards}
+  @keyframes tcv2-ctadraw{to{stroke-dashoffset:0}}
+  #tcv2 .cta span{position:relative;opacity:0}
+  #tcv2-offer.in .cta span{opacity:1;transition:opacity .8s ease 1.7s}
+  #tcv2 .cta:hover{background:var(--green);color:var(--cream)}
+  #tcv2 .cta:hover rect{stroke:var(--green)}
+  @media (prefers-reduced-motion:reduce){
+    #tcv2 .cta rect{stroke-dashoffset:0;animation:none!important}
+    #tcv2 .cta span{opacity:1;transition:none}
+    #tcv2-offer.in .cta{transition:none}
+    #tcv2-offer .k, #tcv2-offer .sub{opacity:1;transform:none;transition:none}
+    #tcv2-offer.in .sub{opacity:.75}
+    #tcv2-offer h1 .line{transform:none;transition:none}
+  }
+  
+  @media (max-width:760px){
+    #tcv2 .cta{
+      top:auto;bottom:10vh;left:8vw;right:8vw;
+      transform:none;
+      text-align:center;
+      font-size:min(12px,3.3vw);letter-spacing:.22em;
+      padding:24px 8px;padding-left:calc(8px + .22em);
+    }
+  }
+
+  
+  #tcv2-ghosts{
+    position:absolute;top:0;left:0;right:0;height:200vh;
+    overflow:hidden;pointer-events:none;
+  }
+  #tcv2-ghosts .g{
+    position:absolute;left:0;right:0;
+    background-size:cover;background-repeat:no-repeat;
+    mix-blend-mode:multiply;opacity:.5;
+    filter:contrast(1.12);
+    will-change:transform;
+  }
+  
+  #tcv2-ghosts .g1{
+    top:52vh;height:86vh;
+    background-image:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-ghost-a2.jpg');
+    background-position:center 48%;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 30%,#000 72%,transparent);
+            mask-image:linear-gradient(180deg,transparent,#000 30%,#000 72%,transparent);
+  }
+  
+  #tcv2-ghosts .g2{
+    top:157vh;height:43vh;
+    background-image:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-ghost-b2.jpg');
+    background-position:center 35%;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 45%,#000 78%,transparent);
+            mask-image:linear-gradient(180deg,transparent,#000 45%,#000 78%,transparent);
+  }
+
+  
+  #tcv2-process{
+    height:420vh;
+    
+    scroll-snap-align:start;scroll-snap-stop:always;
+  }
+  #tcv2-process .pin{
+    position:sticky;top:0;height:100vh;overflow:hidden;
+    display:flex;align-items:center;
+  }
+  
+  #tcv2-gproc{
+    position:absolute;inset:0;
+    background:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-ghost-c.jpg') center 60%/cover no-repeat;
+    mix-blend-mode:multiply;opacity:.4;
+    filter:contrast(1.12);
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 22%);
+            mask-image:linear-gradient(180deg,transparent,#000 22%);
+    pointer-events:none;will-change:transform;
+    transform:scale(1.08);
+  }
+  #tcv2-track{
+    display:flex;align-items:center;gap:4vw;
+    padding:0 8vw;
+    will-change:transform;
+  }
+  #tcv2-process .panel{flex:none}
+  #tcv2-process .lead{width:min(640px,78vw)}
+  #tcv2-process h2{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(2.6rem,5.8vw,5.6rem);
+    line-height:1.05;color:var(--ink);
+    margin-top:24px;
+  }
+  #tcv2-process .lead p{
+    font:600 11px/1.9 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.34em;text-transform:uppercase;
+    color:rgba(12,15,13,.6);margin-top:26px;
+  }
+  #tcv2-process .lead p b{display:inline-block;color:var(--green);animation:tcv2-nudge 1.6s ease-in-out infinite}
+  @keyframes tcv2-nudge{50%{transform:translateX(7px)}}
+  @media (prefers-reduced-motion:reduce){
+    #tcv2-process .lead p b{animation:none}
+  }
+  #tcv2 .card{
+    flex:none;width:min(430px,74vw);
+    position:relative;
+    border:1px solid rgba(12,15,13,.3);
+    background:rgba(244,241,230,.82);
+    padding:38px 34px 44px;
+    color:var(--ink);
+    transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+    will-change:transform;
+    transition:border-color .35s ease,background .35s ease;
+  }
+  #tcv2 .card:hover{border-color:rgba(12,15,13,.55);background:rgba(244,241,230,.95)}
+  #tcv2 .card .num{
+    position:absolute;top:18px;right:22px;
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    font-size:74px;line-height:1;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(20,53,42,.35);
+    transform:translateX(var(--nx,0px));   
+    will-change:transform;
+  }
+  #tcv2 .card .kick{margin-bottom:20px}
+  #tcv2 .card h3{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.1;
+    margin-bottom:18px;
+  }
+  #tcv2 .card p{
+    font:500 14px/1.75 'Mona Sans',Arial,sans-serif;
+    color:rgba(12,15,13,.78);
+  }
+  #tcv2-process .end{
+    width:min(720px,86vw);
+    display:flex;flex-direction:column;align-items:flex-start;gap:34px;
+    padding-right:8vw;
+  }
+  #tcv2-process .end h3{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(2.2rem,4.6vw,4.4rem);line-height:1.08;
+    color:var(--ink);
+  }
+  #tcv2 .cta2{
+    position:relative;
+    font:700 13px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;white-space:nowrap;
+    padding:27px 52px;
+    border:1px solid rgba(20,53,42,.65);
+    transition:background .35s ease,color .35s ease,border-color .35s ease;
+    transform:translate(var(--mx,0px),var(--my,0px));
+  }
+  #tcv2 .cta2:hover{background:var(--green);color:var(--cream);border-color:var(--green)}
+  #tcv2-process .end .aside{
+    font:700 11px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;
+    color:rgba(12,15,13,.6);text-decoration:none;
+    transition:color .3s ease;
+  }
+  #tcv2-process .end .aside:hover{color:var(--green)}
+  #tcv2-process .end .aside b{
+    display:inline-block;margin-left:8px;font-weight:700;
+    color:var(--green);
+    transition:transform .3s cubic-bezier(.2,.6,.2,1);
+  }
+  #tcv2-process .end .aside:hover b{transform:translateX(5px)}
+  
+  #tcv2-hprog{
+    position:absolute;left:8vw;right:8vw;bottom:6.5vh;height:1px;
+    background:rgba(12,15,13,.2);
+  }
+  #tcv2-hprog i{
+    position:absolute;inset:0;
+    background:var(--green);
+    transform:scaleX(0);transform-origin:0 50%;
+  }
+  
+  #tcv2-hstep{
+    position:absolute;right:8vw;bottom:calc(6.5vh + 16px);
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    font-size:14px;letter-spacing:.18em;
+    color:var(--green);
+  }
+
+  
+  #tcv2-wipe{
+    position:fixed;inset:0;z-index:95;
+    background:var(--green);
+    transform:scaleY(0);transform-origin:50% 100%;
+    pointer-events:none;
+    transition:transform .5s cubic-bezier(.76,0,.24,1);
+  }
+  #tcv2-wipe.go{transform:scaleY(1)}
+
+</style>
+<div id="tcv2">
+
+  <div id="tcv2-grain"></div>
+  <div id="tcv2-progress"></div>
+  <div id="tcv2-ghosts" aria-hidden="true"><i class="g g1"></i><i class="g g2"></i></div>
+
+  <a id="tcv2-store" href="/store" data-wipe>STORE</a>
+  <a id="tcv2-brand" href="./" aria-label="Tayloe Capital — back to top" data-wipe>
+    <div class="logo-draw"><div class="logo-ink"></div></div>
+    <span class="brand-name">Tayloe Capital</span>
+  </a>
+
+  <section id="tcv2-home">
+    <h1 id="tcv2-title">TAYLOE CAPITAL</h1>
+    <form id="tcv2-waitlist" novalidate>
+      <div class="wl-row">
+        <input type="email" name="email" placeholder="ENTER YOUR EMAIL" autocomplete="email" required>
+        <button type="submit">JOIN THE WAITLIST<b>&rarr;</b></button>
+      </div>
+      <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p id="tcv2-wl-note" role="status"></p>
+    </form>
+    <div id="tcv2-hint"><span>SCROLL</span><i></i><i></i></div>
+    <span class="corner r">&copy;2026 &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></span>
+  </section>
+
+  <section id="tcv2-offer">
+    <div class="copy">
+      <span class="k">HIDDEN EQUITY</span>
+      <h1>
+        <span class="lw"><span class="line">Your property</span></span>
+        <span class="lw"><span class="line">every option</span></span>
+        <span class="lw"><span class="line">real numbers.</span></span>
+      </h1>
+      <p class="sub">Every option for your property, and what each one is worth.</p>
+    </div>
+    <a class="cta" id="tcv2-cta" href="/hidden-equity" data-wipe>
+      <svg aria-hidden="true"><rect pathLength="100"/></svg>
+      <span>Discover your hidden equity</span>
+    </a>
+  </section>
+
+  <section id="tcv2-process">
+    <div class="pin">
+      <i id="tcv2-gproc" aria-hidden="true"></i>
+      <div id="tcv2-track">
+        <div class="panel lead">
+          <span class="kick">The process</span>
+          <h2>Five steps to<br>a straight answer</h2>
+          <p>Keep scrolling <b>&rarr;</b></p>
+        </div>
+        <article class="card">
+          <span class="num">01</span>
+          <span class="kick">Step one</span>
+          <h3>Enquire</h3>
+          <p>Send us an enquiry — the address and your email. No payment, no inspections, no homework on your end.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <span class="kick">Step two</span>
+          <h3>The data</h3>
+          <p>We pull your property's official cadastre: boundaries, zoning, overlays, easements — the facts that decide what's actually possible.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <span class="kick">Step three</span>
+          <h3>Every play</h3>
+          <p>Subdivide, granny flat, knock-down-rebuild — every play your property allows, costed line by line with real construction numbers.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <span class="kick">Step four</span>
+          <h3>Stress-tested</h3>
+          <p>Each play runs thousands of simulations against real market data — best case, worst case, and everything in between.</p>
+        </article>
+        <article class="card">
+          <span class="num">05</span>
+          <span class="kick">Step five</span>
+          <h3>The verdict</h3>
+          <p>Feasible or not feasible, with the numbers to back it. If the smart move is to do nothing, that's exactly what you'll read.</p>
+        </article>
+        <div class="panel end">
+          <h3>Know what your<br>property is worth.</h3>
+          <a class="cta2" href="/hidden-equity" data-wipe>Get your report</a>
+          <a class="aside" href="/store" data-wipe>Or browse the store<b>&rarr;</b></a>
+        </div>
+      </div>
+      <div id="tcv2-hprog"><i></i></div>
+      <div id="tcv2-hstep">01 / 05</div>
+    </div>
+  </section>
+
+  <div id="tcv2-wipe"></div>
+
+</div>
+<script>
+/* escape any transformed Squarespace ancestor: position:fixed layers must
+   have the viewport as their containing block — then flatten the leftover
+   Squarespace sections (they keep multi-viewport min-heights that would
+   add dead scroll before the runway) */
+(() => {
+  const root = document.getElementById('tcv2');
+  if (root && root.parentElement !== document.body) document.body.appendChild(root);
+  document.querySelectorAll('#page .page-section, #page section').forEach(s => {
+    ['min-height', 'height', 'padding'].forEach(p => s.style.setProperty(p, p === 'height' ? '0px' : '0', 'important'));
+    s.style.setProperty('overflow', 'hidden', 'important');
+  });
+  /* the theme forces the empty wrapper to a full viewport — one screen of
+     dead scroll before the runway */
+  const sw = document.getElementById('siteWrapper');
+  if (sw) sw.style.setProperty('min-height', '0', 'important');
+})();
+
+(() => {
+  /* the intro always starts at the top */
+  history.scrollRestoration = 'manual';
+  scrollTo(0, 0);
+  document.body.classList.add('tcv2-locked');
+
+  const TITLE = 'TAYLOE CAPITAL';
+  const GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&';
+  const title    = document.getElementById('tcv2-title');
+  const brand    = document.getElementById('tcv2-brand');
+  const store    = document.getElementById('tcv2-store');
+  const hint     = document.getElementById('tcv2-hint');
+  const offer    = document.getElementById('tcv2-offer');
+  const waitlist = document.getElementById('tcv2-waitlist');
+  const wlNote   = document.getElementById('tcv2-wl-note');
+  const proc     = document.getElementById('tcv2-process');
+  const track    = document.getElementById('tcv2-track');
+  const hprog    = document.getElementById('tcv2-hprog').firstElementChild;
+  const progress = document.getElementById('tcv2-progress');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* rich pointer effects only where they belong: fine pointer, motion ok */
+  const fx = matchMedia('(pointer: fine)').matches && !reduceMotion;
+  if (fx) document.documentElement.classList.add('fx');
+
+  /* ---------- decode intro (unchanged from the solid-cream build) ---------- */
+  const cells = [...TITLE].map(ch => ({ ch, locked: ch === ' ' }));
+  let spans = null;
+
+  function buildSpans() {
+    const cv = document.createElement('canvas').getContext('2d');
+    cv.font = parseFloat(getComputedStyle(title).fontSize) + 'px AntonTC';
+    title.textContent = '';
+    spans = cells.map(c => {
+      const s = document.createElement('span');
+      s.style.width = cv.measureText(c.ch).width + 'px';
+      s.textContent = c.locked ? ' ' : GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      title.appendChild(s);
+      return s;
+    });
+  }
+
+  const RESOLVE_BASE = 107, RESOLVE_STEP = 32;
+  let decodeDone = false, t0 = 0;
+
+  function decodeTick(now) {
+    if (!t0) t0 = now;
+    const t = now - t0;
+    let allLocked = true;
+    cells.forEach((c, i) => {
+      if (c.locked) return;
+      if (t > RESOLVE_BASE + i * RESOLVE_STEP) {
+        c.locked = true;
+        spans[i].textContent = c.ch;
+      } else {
+        allLocked = false;
+        spans[i].textContent = GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      }
+    });
+    if (allLocked && !decodeDone) {
+      decodeDone = true;
+      /* spans stay alive — each letter becomes hover-scramble-able */
+      setTimeout(reveal, 140);
+    }
+    return allLocked;
+  }
+  function scramble(now) {
+    if (!decodeTick(now)) requestAnimationFrame(scramble);
+  }
+
+  Promise.race([
+    document.fonts.load('100px AntonTC'),
+    new Promise(r => setTimeout(r, 2500))
+  ]).then(() => {
+    if (reduceMotion) { reveal(); return; }
+    buildSpans();
+    requestAnimationFrame(scramble);
+  });
+  /* safety net: never leave the page half-dressed */
+  setTimeout(reveal, 6000);
+
+  /* rAF stalls in occluded windows — keep the decode moving there */
+  const decodePoke = setInterval(() => {
+    if (spans && !decodeDone) decodeTick(performance.now());
+    if (decodeDone) clearInterval(decodePoke);
+  }, 300);
+
+  let revealed = false;
+  function reveal() {
+    if (revealed) return;
+    revealed = true;
+    document.body.classList.remove('tcv2-locked');
+    brand.classList.add('go');      /* the dog draws itself on */
+    store.classList.add('show');
+    hint.classList.add('show');
+    document.getElementById('tcv2-home').classList.add('on');   /* corner labels */
+    initStoreScramble();
+    initTitlePlay();
+    setTimeout(() => { waitlist.classList.add('show'); }, reduceMotion ? 0 : 700);
+  }
+
+  /* post-decode toy: each title letter re-scrambles briefly under the mouse */
+  function initTitlePlay() {
+    if (!fx || !spans) return;
+    spans.forEach((s, i) => {
+      if (cells[i].ch === ' ') return;
+      let busy = false;
+      s.addEventListener('mouseenter', () => {
+        if (busy) return;
+        busy = true;
+        let n = 0;
+        const settle = setTimeout(() => { s.textContent = cells[i].ch; busy = false; }, 500);
+        (function t() {
+          s.textContent = GLYPHS[(Math.random() * GLYPHS.length) | 0];
+          if (++n < 7) requestAnimationFrame(t);
+          else { s.textContent = cells[i].ch; busy = false; clearTimeout(settle); }
+        })();
+      });
+    });
+  }
+
+  /* title font-size is viewport-relative — re-fit the span widths on resize */
+  function sizeTitleSpans() {
+    if (!spans) return;
+    const cv = document.createElement('canvas').getContext('2d');
+    cv.font = parseFloat(getComputedStyle(title).fontSize) + 'px AntonTC';
+    spans.forEach((s, i) => { s.style.width = cv.measureText(cells[i].ch).width + 'px'; });
+  }
+  addEventListener('resize', sizeTitleSpans);
+
+  /* ---------- STORE hover = a tiny decode (the brand's own motif) ---------- */
+  function initStoreScramble() {
+    const txt = store.textContent.trim();
+    const cv = document.createElement('canvas').getContext('2d');
+    cv.font = getComputedStyle(store).fontSize + ' AntonTC';
+    store.textContent = '';
+    const ss = [...txt].map(ch => {
+      const s = document.createElement('span');
+      s.style.width = cv.measureText(ch).width + 'px';
+      s.textContent = ch;
+      store.appendChild(s);
+      return s;
+    });
+    let running = false;
+    store.addEventListener('mouseenter', () => {
+      if (running || reduceMotion) return;
+      running = true;
+      const s0 = performance.now();
+      /* rAF can stall (occluded tab) — this always lands the real word */
+      const settle = setTimeout(() => {
+        ss.forEach((s, i) => s.textContent = txt[i]);
+        running = false;
+      }, 900);
+      (function tick() {
+        const t = performance.now() - s0;
+        let done = true;
+        ss.forEach((s, i) => {
+          if (t > 90 + i * 55) s.textContent = txt[i];
+          else { done = false; s.textContent = GLYPHS[(Math.random() * GLYPHS.length) | 0]; }
+        });
+        if (!done) requestAnimationFrame(tick);
+        else { running = false; clearTimeout(settle); }
+      })();
+    });
+  }
+
+  /* screen 2 arrival is detected in step() below — scrollY is polled there,
+     so it works even where IO/scroll events don't fire (occluded windows) */
+  let offerSeen = false;
+
+  /* ---------- SecondOrderDynamics (from the Lusion teardown) ----------
+     f = response Hz, z = damping, r = initial response. One tiny solver
+     gives the cursor ring, magnetics and parallax their expensive feel. */
+  class SOD {
+    constructor(f, z, r, x0) {
+      const w = 2 * Math.PI * f;
+      this.k1 = z / (Math.PI * f);
+      this.k2 = 1 / (w * w);
+      this.k3 = r * z / w;
+      this.xp = x0; this.y = x0; this.yd = 0;
+    }
+    update(dt, x) {
+      const xd = (x - this.xp) / dt; this.xp = x;
+      const k2s = Math.max(this.k2, dt * dt / 2 + dt * this.k1 / 2, dt * this.k1);
+      this.y += dt * this.yd;
+      this.yd += dt * (x + this.k3 * xd - this.y - this.k1 * this.yd) / k2s;
+      return this.y;
+    }
+  }
+
+  let mx = innerWidth / 2, my = innerHeight / 2, mouseSeen = false;
+  addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; mouseSeen = true; }, { passive: true });
+
+  /* internal links leave through the green wipe */
+  const wipe = document.getElementById('tcv2-wipe');
+  let wiping = false;
+  document.querySelectorAll('#tcv2 [data-wipe]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href || reduceMotion || wiping) return;
+      e.preventDefault();
+      wiping = true;
+      wipe.classList.add('go');
+      setTimeout(() => { location.href = href; }, 520);
+    });
+  });
+
+  /* title parallax springs */
+  const pX = new SOD(1.6, .9, 0, 0), pY = new SOD(1.6, .9, 0, 0);
+
+  const hstep = document.getElementById('tcv2-hstep');
+  const ghostsEl = document.getElementById('tcv2-ghosts');
+  const g1el = ghostsEl.children[0], g2el = ghostsEl.children[1];
+  const gproc = document.getElementById('tcv2-gproc');
+  let hstepShown = 1;
+  const cards = [...document.querySelectorAll('#tcv2 .card')].map(el => {
+    const c = { el, rx: 0, ry: 0, trx: 0, tryy: 0 };
+    if (fx) {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        c.tryy = ((e.clientX - r.left) / r.width - .5) * 5;
+        c.trx  = (.5 - (e.clientY - r.top) / r.height) * 4;
+      });
+      el.addEventListener('mouseleave', () => { c.trx = 0; c.tryy = 0; });
+    }
+    return c;
+  });
+
+  /* ---------- scroll is the master clock — polled, lerped ---------- */
+  let procTop = 0, procH = 0, trackMax = 0, offerTop = 0;
+  function measure() {
+    procTop = proc.getBoundingClientRect().top + scrollY;
+    procH = proc.offsetHeight;
+    trackMax = Math.max(0, track.scrollWidth - innerWidth);
+    offerTop = offer.getBoundingClientRect().top + scrollY;
+  }
+  measure();
+  addEventListener('resize', measure);
+  /* async settles (webfonts, host-page reflow in the embed) can shift the
+     section offsets after init — keep the measurements self-healing */
+  document.fonts.ready.then(measure);
+
+  let hx = 0, lastStep = 0, lastT = 0, frameN = 0;
+  function step(catchUp) {
+    const now = performance.now();
+    const dt = Math.min(.05, Math.max(.001, (now - lastT) / 1000)); lastT = now;
+    lastStep = now;
+    if (++frameN % 60 === 0) measure();
+
+    /* page progress thread */
+    const maxS = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    progress.style.transform = `scaleX(${(scrollY / maxS).toFixed(4)})`;
+
+    /* screen 2 arrival: 35% of it on screen → lines slide out of their
+       masks, CTA border draws at +1s and STAYS an outline */
+    if (!offerSeen && scrollY > offerTop - innerHeight * 0.65) {
+      offerSeen = true;
+      offer.classList.add('in');
+    }
+
+    /* horizontal world: vertical scroll drives the track sideways */
+    const drive = Math.min(1, Math.max(0, (scrollY - procTop) / Math.max(1, procH - innerHeight)));
+    const target = drive * trackMax;
+    hx += (target - hx) * (reduceMotion || catchUp ? 1 : 0.09);
+    if (Math.abs(target - hx) < .05) hx = target;
+    track.style.transform = `translate3d(${(-hx).toFixed(2)}px,0,0)`;
+    hprog.style.transform = `scaleX(${drive.toFixed(4)})`;
+    /* the ghosts drift at their own depths: the peaks lag the scroll,
+       the lower ridge rises to meet the green, the cloud sea slides
+       against the card track — scroll-tied only, no pointer drift */
+    if (!reduceMotion) {
+      g1el.style.transform = `translate3d(0,${(scrollY * .12).toFixed(1)}px,0)`;
+      g2el.style.transform = `translate3d(0,${(-scrollY * .05).toFixed(1)}px,0)`;
+      gproc.style.transform = `translate3d(${(-drive * innerWidth * .05).toFixed(1)}px,0,0) scale(1.08)`;
+    }
+
+    /* step counter + ghost-number parallax, only while the pin is live */
+    if (drive > 0 && drive < 1.0001) {
+      const idx = Math.min(5, Math.max(1, Math.floor(drive * 5.2) + 1));
+      if (idx !== hstepShown) { hstepShown = idx; hstep.textContent = `0${idx} / 05`; }
+      cards.forEach(c => {
+        const r = c.el.getBoundingClientRect();
+        const nx = (r.left + r.width / 2 - innerWidth / 2) * 0.055;
+        c.el.querySelector('.num').style.setProperty('--nx', nx.toFixed(1) + 'px');
+      });
+    }
+
+    if (fx && mouseSeen) {
+      /* title parallax rides the pointer — gently */
+      title.style.setProperty('--px', pX.update(dt, (mx / innerWidth - .5) * 9).toFixed(2) + 'px');
+      title.style.setProperty('--py', pY.update(dt, (my / innerHeight - .5) * 6).toFixed(2) + 'px');
+
+      /* card tilt */
+      cards.forEach(c => {
+        c.rx += (c.trx - c.rx) * .12; c.ry += (c.tryy - c.ry) * .12;
+        c.el.style.setProperty('--rx', c.rx.toFixed(2) + 'deg');
+        c.el.style.setProperty('--ry', c.ry.toFixed(2) + 'deg');
+      });
+    }
+  }
+  function frame() { step(false); requestAnimationFrame(frame); }
+  requestAnimationFrame(frame);
+  /* rAF stalls in occluded windows — settle scroll-driven state there */
+  setInterval(() => { if (performance.now() - lastStep > 400) step(true); }, 300);
+
+  /* waitlist → Apps Script → TC Subscribers sheet.
+     Contract from the live newsletter module: raw JSON string body
+     (no Content-Type header, so no CORS preflight), {email, hp}. */
+  const WAITLIST_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw4XAd3rgJ1M2yg-tzrtRAV-7DA-Dc3dg5PA1TIZRrWwY5JTTgyfdlNCZN66HU6lJfx/exec';
+  waitlist.addEventListener('submit', async e => {
+    e.preventDefault();
+    const email = waitlist.email.value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      wlNote.textContent = 'ENTER A VALID EMAIL';
+      return;
+    }
+    const btn = waitlist.querySelector('button');
+    btn.disabled = true;
+    wlNote.classList.remove('ok');
+    wlNote.textContent = 'JOINING…';
+    try {
+      const res = await fetch(WAITLIST_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({ email, hp: waitlist.hp.value || '' })
+      });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'rejected');
+      waitlist.reset();
+      wlNote.textContent = 'YOU’RE ON THE LIST.';
+      wlNote.classList.add('ok');
+    } catch {
+      wlNote.textContent = 'SOMETHING BROKE — PLEASE TRY AGAIN.';
+      wlNote.classList.remove('ok');
+    }
+    btn.disabled = false;
+  });
+})();
+</script>
