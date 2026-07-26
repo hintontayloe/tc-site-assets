@@ -1,0 +1,1272 @@
+<!-- ================================================================
+     TAYLOE CAPITAL — /hidden-equity page (tc-site-v2)
+     GENERATED FILE — do not edit by hand. Edit ~/tc-site-v2/hidden-equity.html
+     and re-run:  python3 build-hidden-equity.py
+
+     Paste this ENTIRE file into ONE Code block on a BLANK page with the
+     URL slug  hidden-equity  (the /home page's big button points there).
+     Fonts/logo stream from the free CDN — no uploads needed.
+     Full steps: squarespace/INSTRUCTIONS.md
+     ================================================================ -->
+<style>
+  /* ---- Squarespace page takeover (this page only) ---- */
+  #header, .header-announcement-bar-wrapper, .sqs-announcement-bar-dropzone { display: none !important; }
+  #footer-sections, footer.sections { display: none !important; }
+  .cookie-banner-mount-point, .cookie-banner-manager, .manage-cookies-bar, .sqs-cookie-banner-v2 { display: none !important; }
+  #page .page-section { padding: 0 !important; min-height: 0 !important; }
+  #page .content-wrapper { padding: 0 !important; max-width: none !important; }
+  #page .content { width: 100% !important; max-width: none !important; }
+  html { scroll-behavior: smooth; }
+  body, #siteWrapper { margin: 0; background: #F4F1E6 !important; }
+
+  @font-face{
+    font-family:'Mona Sans';
+    src:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-mona.woff2') format('woff2');
+    font-weight:200 900;font-stretch:75% 125%;font-display:block;
+  }
+  @font-face{
+    font-family:'AntonTC';
+    src:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-anton.ttf') format('truetype');
+    font-weight:400;font-display:block;
+  }
+  #heq{
+    --cream:#F4F1E6;
+    --ink:#0C0F0D;
+    --green:#14352A;
+    --muted:rgba(12,15,13,.62);
+    --faint:rgba(12,15,13,.42);
+    --line:rgba(12,15,13,.16);
+    --paper:#FCFBF4;
+  }
+  #heq, #heq *{margin:0;padding:0;box-sizing:border-box}
+  
+  #heq{background:var(--cream);font-family:'Mona Sans',Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  #heq ::selection{background:var(--green);color:var(--cream)}
+
+  
+  #heq-grain{
+    position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    background-size:280px 280px;
+  }
+  #heq-progress{
+    position:fixed;top:0;left:0;right:0;height:2px;z-index:60;
+    background:var(--green);
+    transform:scaleX(0);transform-origin:0 50%;
+  }
+
+  
+  #heq-back{
+    position:fixed;top:4.5vh;left:8vw;z-index:70;
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;
+    opacity:0;transition:opacity .8s ease,color .3s ease;
+  }
+  #heq-back.on{opacity:1}
+  #heq-back:hover{color:var(--green)}
+  #heq-back .scr span{display:inline-block;text-align:center}
+  #heq-back b{font-weight:400;color:var(--green);margin-right:8px}
+
+  @property --sweep{syntax:'<angle>';initial-value:0deg;inherits:false}
+  #heq-brand{
+    position:fixed;top:4.5vh;right:8vw;z-index:70;
+    display:flex;flex-direction:row;align-items:center;gap:10px;
+    color:var(--ink);text-decoration:none;
+    opacity:0;transition:opacity .8s ease;
+  }
+  #heq-brand.on{opacity:1}
+  #heq-brand:hover{opacity:.6}
+  #heq .logo-draw{
+    width:42px;height:42px;
+    -webkit-mask:conic-gradient(from 200deg,#000 var(--sweep),transparent 0deg);
+            mask:conic-gradient(from 200deg,#000 var(--sweep),transparent 0deg);
+  }
+  #heq-brand.go .logo-draw{animation:heq-logodraw 1.7s cubic-bezier(.4,0,.25,1) .3s forwards}
+  @keyframes heq-logodraw{to{--sweep:360deg}}
+  #heq .logo-ink{
+    width:100%;height:100%;background:var(--ink);
+    -webkit-mask:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-logo.png') center/contain no-repeat;
+            mask:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-logo.png') center/contain no-repeat;
+  }
+  #heq .brand-name{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    font-size:14px;letter-spacing:.08em;text-transform:uppercase;
+  }
+  @media (prefers-reduced-motion:reduce){
+    #heq .logo-draw{-webkit-mask:none;mask:none;animation:none}
+  }
+
+  
+  #heq-ghosts{
+    position:absolute;top:0;left:0;right:0;
+    overflow:hidden;pointer-events:none;
+  }
+  #heq-ghosts .g{
+    position:absolute;left:0;right:0;
+    background-size:cover;background-repeat:no-repeat;
+    mix-blend-mode:multiply;opacity:.5;
+    filter:contrast(1.12);
+    will-change:transform;
+  }
+  
+  #heq-ghosts .gd{
+    top:54vh;height:88vh;
+    background-image:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-ghost-d.jpg');
+    background-position:center 40%;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 30%,#000 68%,transparent);
+            mask-image:linear-gradient(180deg,transparent,#000 30%,#000 68%,transparent);
+  }
+  
+  #heq-ghosts .ge{
+    top:0;height:92vh;
+    background-image:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-ghost-e.jpg');
+    background-position:62% 38%;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 32%,#000 68%,transparent);
+            mask-image:linear-gradient(180deg,transparent,#000 32%,#000 68%,transparent);
+  }
+
+  
+  #heq .wrap{max-width:1240px;margin:0 auto;padding:0 8vw;position:relative}
+  @media (min-width:1550px){#heq .wrap{padding:0 40px}}
+  #heq .k{
+    font:600 11px/1.8 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.34em;text-transform:uppercase;
+  }
+  #heq .k.kick{color:var(--green)}
+  #heq .k.dim{color:var(--muted)}
+  #heq h1, #heq h2, #heq h3, #heq .anton{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;
+    text-transform:uppercase;line-height:1.04;
+    letter-spacing:.01em;
+  }
+  #heq p.body{
+    font:400 16px/1.75 'Mona Sans',Arial,sans-serif;
+    color:var(--muted);max-width:56ch;
+  }
+  #heq p.body b{color:var(--ink);font-weight:600}
+  #heq .micro{
+    font:600 10.5px/1.9 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;color:var(--faint);
+  }
+  #heq .micro b{color:var(--green);font-weight:700}
+
+  #heq section{padding:15vh 0;position:relative}
+  #heq .sec-head{display:flex;flex-direction:column;gap:22px;margin-bottom:9vh}
+  #heq .sec-head h2{font-size:clamp(2.2rem,5.6vw,5rem)}
+
+  
+  #heq .rv{opacity:0;transform:translateY(26px);
+      transition:opacity 1s cubic-bezier(.22,.8,.26,1),transform 1s cubic-bezier(.22,.8,.26,1)}
+  #heq .rv.in{opacity:1;transform:none}
+  #heq .rv.d1{transition-delay:.12s}#heq .rv.d2{transition-delay:.24s}#heq .rv.d3{transition-delay:.36s}
+  #heq .rv.d4{transition-delay:.48s}#heq .rv.d5{transition-delay:.6s}
+  
+  #heq .rvm .lw{display:block;overflow:hidden}
+  #heq .rvm .line{
+    display:block;transform:translateY(112%);
+    transition:transform .9s cubic-bezier(.19,.7,.22,1);
+  }
+  #heq .rvm.in .line{transform:none}
+  #heq .rvm.in .lw:nth-child(2) .line{transition-delay:.09s}
+  #heq .rvm.in .lw:nth-child(3) .line{transition-delay:.18s}
+  @media (prefers-reduced-motion:reduce){
+    #heq .rv{opacity:1;transform:none;transition:none}
+    #heq .rvm .line{transform:none;transition:none}
+  }
+
+  
+  #heq-hero{
+    min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+    padding:15vh 0 8vh;overflow:hidden;
+  }
+  #heq-hero h1{
+    font-size:clamp(2.8rem,7.4vw,7rem);margin:26px 0 30px;
+    transform:translate(var(--px,0px),var(--py,0px));
+    will-change:transform;
+  }
+  #heq-hero .sub{
+    font:600 11px/2 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;
+    color:var(--muted);max-width:640px;margin-bottom:30px;
+  }
+  #heq-hero p.body{margin-bottom:46px}
+  #heq .cta-row{display:flex;align-items:center;gap:46px;flex-wrap:wrap}
+  #heq .cta{
+    position:relative;display:inline-block;
+    font:700 13px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;white-space:nowrap;
+    padding:27px 52px;
+    transition:background .35s ease,color .35s ease;
+  }
+  #heq .cta svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  #heq .cta rect{
+    x:0.5px;y:0.5px;width:calc(100% - 1px);height:calc(100% - 1px);
+    fill:none;stroke:rgba(20,53,42,.75);stroke-width:1;
+    vector-effect:non-scaling-stroke;
+    stroke-dasharray:100;stroke-dashoffset:100;
+  }
+  #heq .rv.in .cta rect{animation:heq-ctadraw 1.1s cubic-bezier(.4,0,.2,1) .5s forwards}
+  @keyframes heq-ctadraw{to{stroke-dashoffset:0}}
+  #heq .cta span{position:relative}
+  #heq .cta:hover{background:var(--green);color:var(--cream)}
+  #heq .cta:hover rect{stroke:var(--green)}
+  #heq .ghost{
+    font:700 11px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--ink);text-decoration:none;
+    border-bottom:1px solid var(--line);padding-bottom:8px;
+    transition:border-color .3s ease,color .3s ease,opacity .3s ease;opacity:.75;
+  }
+  #heq .ghost:hover{border-color:var(--green);color:var(--green);opacity:1}
+  #heq .hero-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border-top:1px solid var(--line);margin-top:11vh;
+  }
+  #heq .hero-stats div{
+    padding:26px 0;font:600 11px/1.6 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--muted);
+  }
+  @media (prefers-reduced-motion:reduce){#heq .cta rect{stroke-dashoffset:0;animation:none!important}}
+  @media (max-width:560px){
+    #heq .hero-stats{grid-template-columns:1fr}
+    #heq .hero-stats div{padding:16px 0;border-bottom:1px solid var(--line)}
+    #heq .hero-stats div:last-child{border-bottom:none}
+  }
+
+  
+  #heq .gap-rows{border-top:1px solid var(--line)}
+  #heq .gap-rows .row{
+    display:grid;grid-template-columns:110px 1fr;gap:30px;align-items:baseline;
+    padding:38px 0;border-bottom:1px solid var(--line);
+  }
+  @media (max-width:560px){#heq .gap-rows .row{grid-template-columns:48px 1fr;gap:18px}}
+  #heq .gap-rows .row .num{
+    font-family:'AntonTC',Arial,sans-serif;font-size:20px;color:var(--faint);
+  }
+  #heq .gap-rows .row p{
+    font:600 clamp(15px,1.8vw,21px)/1.55 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.02em;max-width:44ch;
+  }
+  #heq .gap-close{margin-top:9vh;max-width:56ch}
+
+  
+  #heq .step{
+    display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:6vw;
+    padding:9vh 0;border-top:1px solid var(--line);
+  }
+  #heq .step:first-of-type{border-top:none;padding-top:0}
+  #heq .step .side{display:flex;flex-direction:column;gap:16px}
+  #heq .step .side .stepnum{
+    font-family:'AntonTC',Arial,sans-serif;
+    font-size:clamp(2.4rem,4vw,3.6rem);line-height:1;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(20,53,42,.4);
+  }
+  #heq .step .side h3{font-size:clamp(1.4rem,2.4vw,2rem)}
+  #heq .step .side p.body{font-size:14.5px;line-height:1.7}
+  @media (max-width:860px){#heq .step{grid-template-columns:1fr;gap:36px}}
+
+  
+  #heq .facts{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  #heq .facts div{
+    border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:24px 22px;display:flex;flex-direction:column;gap:10px;
+  }
+  #heq .facts .k{color:var(--faint);font-size:10px}
+  #heq .facts .v{
+    font-family:'AntonTC',Arial,sans-serif;
+    font-size:clamp(1.05rem,1.7vw,1.5rem);text-transform:uppercase;
+  }
+  @media (max-width:640px){#heq .facts{grid-template-columns:repeat(2,1fr)}}
+  #heq .facts-note{margin-top:26px}
+
+  
+  #heq .ovl-head{margin:54px 0 24px;display:flex;flex-direction:column;gap:10px}
+  #heq .ovl{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
+  }
+  #heq .ovl .chip{
+    border:1px solid var(--line);padding:14px 14px 13px;
+    display:flex;flex-direction:column;gap:8px;
+    background:rgba(244,241,230,.6);
+  }
+  #heq .ovl .chip .cl{
+    font:600 8.5px/1.5 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  }
+  #heq .ovl .chip .cs{
+    font:700 9px/1 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;color:var(--green);
+  }
+  #heq .ovl .chip .cs::before{
+    content:'';display:inline-block;width:5px;height:5px;border-radius:50%;
+    background:var(--green);margin-right:8px;vertical-align:1px;
+  }
+  #heq .ovl .chip.partial .cs{color:var(--ink)}
+  #heq .ovl .chip.partial .cs::before{background:transparent;border:1px solid var(--ink)}
+  @media (max-width:960px){#heq .ovl{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:640px){#heq .ovl{grid-template-columns:repeat(2,1fr)}}
+  #heq .ovl-note{margin-top:26px;max-width:76ch}
+
+  
+  #heq .plays{border-top:1px solid var(--line)}
+  #heq .play{
+    display:grid;grid-template-columns:1fr auto;gap:8px 30px;align-items:baseline;
+    padding:34px 0;border-bottom:1px solid var(--line);
+  }
+  #heq .play .name{font:700 12px/1.6 'Mona Sans',Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase}
+  #heq .play .name em{font-style:normal;color:var(--faint);letter-spacing:.24em;display:block;font-weight:600;font-size:10.5px;margin-top:6px}
+  #heq .play .net{
+    font-family:'AntonTC',Arial,sans-serif;
+    font-size:clamp(2rem,4.6vw,4rem);line-height:1;text-align:right;
+  }
+  #heq .play .verdict{grid-column:1/-1;font:600 10.5px/1.7 'Mona Sans',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+  #heq .play.rec .verdict{color:var(--green)}
+  #heq .play.neg .net, #heq .play.neg .name{color:var(--faint)}
+  #heq .play.neg .net{text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:rgba(12,15,13,.35)}
+  #heq .play.rec{position:relative}
+  #heq .play.rec::before{
+    content:'';position:absolute;left:-28px;top:-1px;bottom:-1px;width:4px;background:var(--green);
+  }
+
+  
+  #heq .cost-cols{display:grid;grid-template-columns:1.25fr 1fr;gap:6vw}
+  @media (max-width:860px){#heq .cost-cols{grid-template-columns:1fr;gap:60px}}
+  #heq .tbl{display:flex;flex-direction:column}
+  #heq .tbl .trow{
+    display:grid;grid-template-columns:1fr auto;gap:24px;align-items:baseline;
+    padding:15px 0;border-bottom:1px solid var(--line);position:relative;
+  }
+  #heq .tbl .trow .lab{font:600 11px/1.6 'Mona Sans',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  #heq .tbl .trow .amt{font:700 13px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.1em}
+  #heq .tbl .trow .bar{
+    position:absolute;left:0;bottom:-1px;height:2px;background:var(--green);
+    width:var(--w);transform:scaleX(0);transform-origin:left;
+    transition:transform 1.2s cubic-bezier(.22,.8,.26,1) var(--d,0s);
+  }
+  #heq .in .tbl .trow .bar{transform:scaleX(1)}
+  #heq .tbl .trow.total{border-bottom:2px solid var(--ink)}
+  #heq .tbl .trow.total .lab{
+    color:var(--ink);font-weight:700;letter-spacing:.24em;
+  }
+  #heq .tbl .trow.total .amt{font-family:'AntonTC',Arial,sans-serif;font-size:24px;font-weight:400;letter-spacing:.02em}
+  #heq .tbl-title{margin-bottom:26px}
+  @media (prefers-reduced-motion:reduce){#heq .tbl .trow .bar{transform:scaleX(1);transition:none}}
+
+  
+  #heq .scen{border-top:1px solid var(--line);margin-bottom:8vh}
+  #heq .scen .srow{
+    display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:center;
+    padding:20px 0 0;border-bottom:1px solid var(--line);
+  }
+  #heq .scen .srow .lab{font:600 11px/1.7 'Mona Sans',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  #heq .scen .srow .val{font-family:'AntonTC',Arial,sans-serif;font-size:22px}
+  #heq .scen .srow .track{grid-column:1/-1;height:2px;background:rgba(12,15,13,.08);position:relative;margin-top:14px}
+  #heq .scen .srow .track i{
+    position:absolute;inset:0;background:var(--green);
+    width:var(--w);transform:scaleX(0);transform-origin:left;
+    transition:transform 1.2s cubic-bezier(.22,.8,.26,1) var(--d,0s);
+  }
+  #heq .in .scen .srow .track i{transform:scaleX(1)}
+  @media (prefers-reduced-motion:reduce){#heq .scen .srow .track i{transform:scaleX(1);transition:none}}
+
+  #heq .dist{width:100%}
+  #heq .dist svg{width:100%;height:auto;display:block;overflow:visible}
+  #heq .dist .curve{
+    fill:none;stroke:var(--ink);stroke-width:1.5;
+    stroke-dasharray:1200;stroke-dashoffset:1200;
+  }
+  #heq .in .dist .curve{transition:stroke-dashoffset 2.2s cubic-bezier(.4,0,.2,1) .2s;stroke-dashoffset:0}
+  #heq .dist .band{fill:rgba(20,53,42,.08);opacity:0;transition:opacity 1s ease 1.4s}
+  #heq .in .dist .band{opacity:1}
+  #heq .dist .axis{stroke:var(--line);stroke-width:1}
+  #heq .dist .pmark{stroke:var(--green);stroke-width:1;stroke-dasharray:3 4;opacity:0;transition:opacity .8s ease 1.6s}
+  #heq .in .dist .pmark{opacity:.8}
+  #heq .dist text{
+    font:600 10px 'Mona Sans',Arial,sans-serif;letter-spacing:.18em;
+    fill:var(--ink);text-transform:uppercase;
+  }
+  #heq .dist text.dim{fill:var(--faint);letter-spacing:.24em;font-size:9px}
+  #heq .dist .plab{opacity:0;transition:opacity .8s ease 1.7s}
+  #heq .in .dist .plab{opacity:1}
+  @media (prefers-reduced-motion:reduce){
+    #heq .dist .curve{stroke-dashoffset:0;transition:none}
+    #heq .dist .band, #heq .dist .plab{opacity:1;transition:none}
+    #heq .dist .pmark{opacity:.8;transition:none}
+  }
+  #heq .dist-note{margin-top:30px}
+
+  
+  #heq .verdict-line{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+  #heq .verdict-line .vrow{
+    display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:30px;
+    padding:30px 0;border-bottom:1px solid var(--line);
+  }
+  #heq .verdict-line .vrow .k{color:var(--muted)}
+  #heq .verdict-line .vrow .big{
+    font-family:'AntonTC',Arial,sans-serif;
+    font-size:clamp(2.6rem,7vw,6rem);line-height:1;text-align:right;
+  }
+  #heq .verdict-line .vrow .big.go{color:var(--green)}
+  #heq .verdict-note{margin-top:40px}
+
+  
+  #heq-report .strip{
+    display:flex;gap:26px;overflow-x:auto;padding:10px 8vw 34px;
+    scroll-snap-type:x proximity;scroll-padding:0 8vw;scrollbar-width:none;
+  }
+  #heq-report .strip::-webkit-scrollbar{display:none}
+  #heq .page-card{
+    flex:0 0 auto;width:272px;aspect-ratio:210/297;
+    background:var(--paper);border:1px solid var(--line);
+    box-shadow:0 24px 50px rgba(12,15,13,.09);
+    scroll-snap-align:start;
+    padding:22px 20px;display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+    transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+    will-change:transform;
+    transition:border-color .35s ease;
+  }
+  #heq .page-card:hover{border-color:rgba(12,15,13,.4)}
+  #heq .page-card .ph{
+    font:700 6.5px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--faint);
+    display:flex;justify-content:space-between;margin-bottom:14px;
+  }
+  #heq .page-card h4{
+    font-family:'AntonTC',Arial,sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:15px;line-height:1.1;margin-bottom:4px;
+  }
+  #heq .page-card .tag{font:600 6.5px/1.6 'Mona Sans',Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  #heq .page-card .pf{
+    margin-top:auto;font:600 6px/1.6 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--faint);
+    display:flex;justify-content:space-between;
+  }
+  #heq .mini-stat{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-bottom:1px solid var(--line)}
+  #heq .mini-stat .ms-k{font:600 6px/1.4 'Mona Sans',Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--faint)}
+  #heq .mini-row{
+    display:flex;justify-content:space-between;gap:8px;align-items:baseline;
+    padding:6.5px 0;border-bottom:1px solid var(--line);
+    font:600 6.8px/1.5 'Mona Sans',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  }
+  #heq .mini-row b{font:700 7.5px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.08em;color:var(--ink)}
+  #heq .mini-row b.gr{color:var(--green)}
+  #heq .page-card .bigval{
+    font-family:'AntonTC',Arial,sans-serif;font-size:34px;line-height:1;margin:8px 0 10px;
+  }
+  #heq .page-card .cover-mid{margin:auto 0;display:flex;flex-direction:column;gap:10px}
+  #heq .page-card .cover-logo{width:34px;height:34px;background:var(--ink);
+    -webkit-mask:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-logo.png') center/contain no-repeat;
+            mask:url('https://cdn.jsdelivr.net/gh/hintontayloe/tc-site-assets@main/tcv2-logo.png') center/contain no-repeat;margin-bottom:6px}
+  #heq .page-card .cover-mid h4{font-size:22px}
+  
+  #heq .page-card.tease{
+    background:transparent;box-shadow:none;
+    border:1px dashed rgba(20,53,42,.5);
+    align-items:center;justify-content:center;
+  }
+  #heq .page-card.tease .tease-mid{
+    margin:auto;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;
+  }
+  #heq .tease-num{
+    font-family:'AntonTC',Arial,sans-serif;font-size:64px;line-height:1;
+    color:transparent;-webkit-text-stroke:1px rgba(20,53,42,.55);
+  }
+  #heq .tease-lab{
+    font:600 9px/1.8 'Mona Sans',Arial,sans-serif;
+    letter-spacing:.3em;text-transform:uppercase;color:var(--muted);
+  }
+  #heq .strip-note{padding:0 8vw;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  #heq .strip-note b{color:var(--green)}
+
+  
+  #heq .method-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border-left:1px solid var(--line);border-top:1px solid var(--line);
+  }
+  #heq .method-grid>div{
+    border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:34px 28px 44px;display:flex;flex-direction:column;gap:16px;
+    background:rgba(244,241,230,.6);
+  }
+  #heq .method-grid .num{font-family:'AntonTC',Arial,sans-serif;font-size:19px;color:var(--green);opacity:.65}
+  #heq .method-grid h3{font-size:clamp(1.05rem,1.5vw,1.3rem)}
+  #heq .method-grid p{font:400 13.5px/1.75 'Mona Sans',Arial,sans-serif;color:var(--muted)}
+  @media (max-width:960px){#heq .method-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){#heq .method-grid{grid-template-columns:1fr}}
+  #heq .coverage{margin-top:34px;max-width:80ch}
+  #heq .backtest{
+    display:grid;grid-template-columns:1fr auto;gap:30px;align-items:baseline;
+    border-bottom:1px solid var(--line);padding:38px 0;margin-top:9vh;
+  }
+  #heq .backtest p{font:600 clamp(14px,1.7vw,19px)/1.6 'Mona Sans',Arial,sans-serif;max-width:52ch}
+  #heq .backtest p b{white-space:nowrap}
+  #heq .backtest .anton{font-size:clamp(2rem,4.4vw,3.6rem);line-height:1;white-space:nowrap;color:var(--green)}
+  @media (max-width:720px){#heq .backtest{grid-template-columns:1fr}}
+
+  
+  #heq .steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-left:1px solid var(--line);border-top:1px solid var(--line);margin-bottom:9vh}
+  #heq .steps3>div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 28px 44px;display:flex;flex-direction:column;gap:16px;background:rgba(244,241,230,.6)}
+  #heq .steps3 .num{font-family:'AntonTC',Arial,sans-serif;font-size:19px;color:var(--green);opacity:.65}
+  #heq .steps3 h3{font-size:clamp(1.05rem,1.6vw,1.4rem)}
+  #heq .steps3 p{font:400 13.5px/1.75 'Mona Sans',Arial,sans-serif;color:var(--muted)}
+  @media (max-width:720px){#heq .steps3{grid-template-columns:1fr}}
+  #heq .terms{
+    display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    margin-bottom:9vh;
+  }
+  #heq .terms div{
+    flex:1 1 180px;padding:30px 26px 30px 0;
+    font:600 11px/1.8 'Mona Sans',Arial,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
+  }
+  #heq .terms div b{display:block;font-family:'AntonTC',Arial,sans-serif;font-weight:400;font-size:26px;letter-spacing:.02em;color:var(--ink);margin-bottom:8px}
+  #heq .honest{
+    display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:6vw;align-items:start;
+  }
+  #heq .honest h3{font-size:clamp(1.5rem,3vw,2.4rem)}
+  #heq .honest p.body{max-width:58ch}
+  @media (max-width:860px){#heq .honest{grid-template-columns:1fr;gap:26px}}
+  #heq .forlist{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:9vh}
+  #heq .forlist h4{font:700 11px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;margin-bottom:20px}
+  #heq .forlist p{font:400 14.5px/1.75 'Mona Sans',Arial,sans-serif;color:var(--muted);max-width:44ch}
+  @media (max-width:720px){#heq .forlist{grid-template-columns:1fr;gap:44px}}
+
+  
+  #heq-enquire{padding-bottom:12vh}
+  #heq-enquire .sec-head{margin-bottom:7vh}
+  #heq-form{max-width:640px;display:flex;flex-direction:column;gap:36px;position:relative}
+  #heq-form .field{display:flex;flex-direction:column;gap:12px}
+  #heq-form label{font:600 10.5px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
+  #heq-form input[type=text], #heq-form input[type=email]{
+    background:none;border:none;outline:none;
+    border-bottom:1px solid rgba(12,15,13,.35);
+    padding:10px 0 14px;color:var(--ink);
+    font:600 15px/1.3 'Mona Sans',Arial,sans-serif;letter-spacing:.08em;
+    border-radius:0;
+    transition:border-color .3s ease;
+  }
+  #heq-form input:focus{border-color:var(--green)}
+  #heq-form input::placeholder{color:var(--faint);letter-spacing:.18em;font-size:12px;text-transform:uppercase}
+  #heq-form button{
+    align-self:flex-start;
+    background:transparent;color:var(--ink);border:1px solid rgba(20,53,42,.65);cursor:pointer;
+    font:700 13px/1 'Mona Sans',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;
+    padding:27px 52px;
+    transition:background .35s ease,color .35s ease,border-color .35s ease;
+  }
+  #heq-form button:hover{background:var(--green);color:var(--cream);border-color:var(--green)}
+  #heq-form button:disabled{opacity:.5;cursor:default}
+  #heq-form button b{display:inline-block;margin-left:12px;font-weight:700;color:var(--green);transition:transform .3s cubic-bezier(.2,.6,.2,1),color .35s ease}
+  #heq-form button:hover b{transform:translateX(5px);color:var(--cream)}
+  #heq-form [name=hp]{position:absolute;left:-9999px;width:0;height:0;opacity:0}
+  #heq-note{font:600 10.5px/1.8 'Mona Sans',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;min-height:1.8em;color:var(--muted)}
+  #heq-note.ok{color:var(--green)}
+  #heq .enq-micro{margin-top:34px}
+
+  
+  #heq footer{
+    border-top:1px solid var(--line);
+    padding:44px 8vw 54px;position:relative;
+    display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center;
+  }
+  #heq footer .fbrand{
+    display:flex;align-items:center;gap:10px;
+    color:var(--ink);text-decoration:none;
+    transition:opacity .3s ease;
+  }
+  #heq footer .fbrand:hover{opacity:.7}
+  #heq footer .fbrand .logo-ink{width:40px;height:40px}
+  #heq footer .legal{
+    font:600 9.5px/2 'Mona Sans',Arial,sans-serif;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--faint);max-width:72ch;
+  }
+  #heq footer .legal-links{margin-top:10px}
+  #heq .legal-link{color:var(--green);text-decoration:none;transition:opacity .3s ease}
+  #heq .legal-link:hover{opacity:.7}
+
+  
+  #heq-wipe{
+    position:fixed;inset:0;z-index:95;
+    background:var(--green);
+    transform:scaleY(1);transform-origin:50% 0;
+    pointer-events:none;
+    transition:transform .6s cubic-bezier(.76,0,.24,1);
+  }
+  #heq-wipe.out{transform:scaleY(0)}
+  #heq-wipe.go{transform:scaleY(1);transform-origin:50% 100%}
+  @media (prefers-reduced-motion:reduce){
+    #heq-wipe{transition:none;transform:scaleY(0)}
+  }
+</style>
+<div id="heq">
+
+  <div id="heq-grain"></div>
+  <div id="heq-progress"></div>
+  <div id="heq-ghosts" aria-hidden="true"><i class="g gd"></i><i class="g ge"></i></div>
+
+  <a id="heq-back" href="/" data-wipe><b>&larr;</b><span class="scr">BACK</span></a>
+  <a id="heq-brand" href="/" aria-label="Tayloe Capital — home" data-wipe>
+    <div class="logo-draw"><div class="logo-ink"></div></div>
+    <span class="brand-name">Tayloe Capital</span>
+  </a>
+
+  <!-- ================= HERO ================= -->
+  <section id="heq-hero">
+    <div class="wrap">
+      <span class="k kick rv">The Hidden Equity Report &mdash; Australia</span>
+      <h1 class="rvm">
+        <span class="lw"><span class="line">There&rsquo;s hidden</span></span>
+        <span class="lw"><span class="line">money in</span></span>
+        <span class="lw"><span class="line">your property.</span></span>
+      </h1>
+      <p class="sub rv d3">Subdivision &middot; secondary dwelling &middot; dual occupancy &middot; development &mdash; every lawful play on your property, costed with real construction numbers and finished with a clear feasible&nbsp;/&nbsp;not&nbsp;feasible verdict.</p>
+      <!-- PRICE appears here, in the offer steps, and in the Terms row — three spots to edit -->
+      <p class="body rv d3">Send us an enquiry &mdash; we&rsquo;ll get back to you within five business days with a straight answer on whether your property is worth the full analysis. <b>You pay nothing to find out.</b> The full report, if you want it, is $760.</p>
+      <div class="cta-row rv d4">
+        <a class="cta" href="#heq-enquire">
+          <svg aria-hidden="true"><rect pathLength="100"/></svg>
+          <span>Send an enquiry</span>
+        </a>
+        <a class="ghost" href="#heq-case">See it work &darr;</a>
+      </div>
+      <div class="hero-stats">
+        <div class="rv d3">Free to enquire</div>
+        <div class="rv d4">Every play costed</div>
+        <div class="rv d5">Feasible or not &mdash; a straight answer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE GAP ================= -->
+  <section id="heq-gap">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="k kick rv">Why this exists</span>
+        <h2 class="rvm"><span class="lw"><span class="line">Nobody else</span></span><span class="lw"><span class="line">will tell you.</span></span></h2>
+      </div>
+      <div class="gap-rows">
+        <div class="row rv"><span class="num">01</span><p>A builder will tell you &mdash; but he wants the job.</p></div>
+        <div class="row rv d1"><span class="num">02</span><p>A valuer tells you what it&rsquo;s worth today &mdash; never what you could make it.</p></div>
+        <div class="row rv d2"><span class="num">03</span><p>A buyer&rsquo;s agent buys property. Nobody assesses what you already own.</p></div>
+      </div>
+      <p class="body gap-close rv">The Hidden Equity Report is the missing analysis: <b>independent, fully costed, and honest enough to say &ldquo;don&rsquo;t&rdquo;.</b> Below is what it does with one property.</p>
+    </div>
+  </section>
+
+  <!-- ================= CASE STUDY ================= -->
+  <section id="heq-case">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="k kick rv">Illustrative sample &mdash; real engine output</span>
+        <h2 class="rvm"><span class="lw"><span class="line">One property,</span></span><span class="lw"><span class="line">end to end.</span></span></h2>
+        <p class="body rv d2">27 Jacaranda Street, Marsden &mdash; <b>a made-up address, run on real numbers</b> &mdash; 1,050&nbsp;m&sup2; in Logan City, worth about $950,000 as it stands. Here is exactly what we do with one enquiry.</p>
+      </div>
+
+      <!-- STEP 01 -->
+      <div class="step rv">
+        <div class="side">
+          <span class="stepnum">01</span>
+          <h3>The address goes in</h3>
+          <p class="body">That&rsquo;s all we need. The address is matched against the state&rsquo;s address register &mdash; <b>an exact match, or we ask; never a guess</b> &mdash; then the property&rsquo;s facts come straight from the state cadastre and the council&rsquo;s planning scheme, every field stamped with its source.</p>
+        </div>
+        <div>
+          <div class="facts">
+            <div><span class="k">Land area</span><span class="v">1,050&nbsp;m&sup2;</span></div>
+            <div><span class="k">Frontage &times; depth</span><span class="v">17&nbsp;&times;&nbsp;62&nbsp;m</span></div>
+            <div><span class="k">Lot on plan</span><span class="v">7&nbsp;RP&nbsp;138462</span></div>
+            <div><span class="k">Zoning</span><span class="v">Low density res.</span></div>
+            <div><span class="k">Zone precinct</span><span class="v">Suburban</span></div>
+            <div><span class="k">Council</span><span class="v">Logan City</span></div>
+            <div><span class="k">Minimum lot size</span><span class="v">450&nbsp;m&sup2;</span></div>
+            <div><span class="k">Tenure</span><span class="v">Freehold</span></div>
+            <div><span class="k">Existing dwelling</span><span class="v">3-bed brick &rsquo;78</span></div>
+          </div>
+          <p class="micro facts-note">Every field carries its source &mdash; state cadastre &middot; address register &middot; council planning scheme</p>
+
+          <div class="ovl-head">
+            <span class="k kick">The overlay audit</span>
+            <p class="micro">Sixteen layers tested against the parcel polygon itself &mdash; not the suburb, not the street. Your property&rsquo;s actual boundary.</p>
+          </div>
+          <div class="ovl">
+            <div class="chip"><span class="cl">Bushfire hazard</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Flood assessment</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Flood risk</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Flood investigation</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Heritage area</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Historical landslide</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Slope investigation</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Slope hazard &ge;12%</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Slope hazard &ge;15%</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Acid sulfate soils</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Wetland</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Erosion prone area</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Powerline corridor</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Petroleum pipeline</span><span class="cs">Clear</span></div>
+            <div class="chip"><span class="cl">Water pipeline</span><span class="cs">Clear</span></div>
+            <div class="chip partial"><span class="cl">Transport noise corridor</span><span class="cs">Partial</span></div>
+          </div>
+          <p class="micro ovl-note">Dated, lot/plan-scoped, and printed in the report. <b>A clear is evidence</b> &mdash; and if any layer can&rsquo;t be tested, the report stops until a human resolves it. It never quietly assumes.</p>
+        </div>
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="step rv">
+        <div class="side">
+          <span class="stepnum">02</span>
+          <h3>Every pathway, honestly compared</h3>
+          <p class="body">Three lawful plays on this property. We show the losing options too &mdash; knowing what <b>not</b> to do is part of the value. The land is 2.3&times; the minimum lot size: that surplus is the asset no valuation captures.</p>
+        </div>
+        <div class="plays">
+          <div class="play rec">
+            <span class="name">Reconfiguring a lot<em>Retain the home, create a rear lot</em></span>
+            <span class="net">+$164K</span>
+            <span class="verdict">Recommended &mdash; best risk-adjusted return</span>
+          </div>
+          <div class="play">
+            <span class="name">Secondary dwelling<em>Add a 2-bed auxiliary unit</em></span>
+            <span class="net">+$2K</span>
+            <span class="verdict">Viable &mdash; modest upside, plus $540/wk rent</span>
+          </div>
+          <div class="play neg">
+            <span class="name">Knock-down-rebuild duplex<em>Demolish, build dual occupancy</em></span>
+            <span class="net">&minus;$743K</span>
+            <span class="verdict">Does not stack &mdash; destroys a valuable asset</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="step rv">
+        <div class="side">
+          <span class="stepnum">03</span>
+          <h3>The winner, fully costed</h3>
+          <p class="body">Every line computed from a maintained SEQ rate card and the council&rsquo;s adopted charges &mdash; not rules of thumb. End values are anchored to verified comparable sales. <b>The model never invents a sale price.</b></p>
+        </div>
+        <div class="cost-cols">
+          <div class="tbl">
+            <span class="k dim tbl-title">Project cost</span>
+            <div class="trow"><span class="lab">Survey, planning &amp; RoL application</span><span class="amt">$32,000</span><i class="bar" style="--w:26.7%;--d:.05s"></i></div>
+            <div class="trow"><span class="lab">Civil works, driveway &amp; services</span><span class="amt">$120,000</span><i class="bar" style="--w:100%;--d:.1s"></i></div>
+            <div class="trow"><span class="lab">Demolition &amp; site preparation</span><span class="amt">$12,000</span><i class="bar" style="--w:10%;--d:.15s"></i></div>
+            <div class="trow"><span class="lab">Infrastructure charges (council)</span><span class="amt">$38,000</span><i class="bar" style="--w:31.7%;--d:.2s"></i></div>
+            <div class="trow"><span class="lab">Utility headworks (water / sewer)</span><span class="amt">$20,000</span><i class="bar" style="--w:16.7%;--d:.25s"></i></div>
+            <div class="trow"><span class="lab">Legal &amp; title registration</span><span class="amt">$9,000</span><i class="bar" style="--w:7.5%;--d:.3s"></i></div>
+            <div class="trow"><span class="lab">Finance &amp; holding, 12 months</span><span class="amt">$20,000</span><i class="bar" style="--w:16.7%;--d:.35s"></i></div>
+            <div class="trow"><span class="lab">Contingency ~10%</span><span class="amt">$25,100</span><i class="bar" style="--w:20.9%;--d:.4s"></i></div>
+            <div class="trow total"><span class="lab">Total project cost</span><span class="amt">$276,100</span></div>
+          </div>
+          <div class="tbl">
+            <span class="k dim tbl-title">Realisable value</span>
+            <div class="trow"><span class="lab">Front lot + existing home</span><span class="amt">$850,000</span></div>
+            <div class="trow"><span class="lab">New rear lot, registered</span><span class="amt">$540,000</span></div>
+            <div class="trow total"><span class="lab">Total realisable</span><span class="amt">$1,390,000</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 04 -->
+      <div class="step rv">
+        <div class="side">
+          <span class="stepnum">04</span>
+          <h3>Stress-tested, 10,000 times</h3>
+          <p class="body">We re-run the play under higher costs and a softer market, then simulate 10,000 combinations of cost and value movement. The verdict has to survive all of it.</p>
+        </div>
+        <div>
+          <div class="scen">
+            <div class="srow"><span class="lab">Base case &mdash; as modelled</span><span class="val">+$164K</span><span class="track"><i style="--w:100%;--d:.05s"></i></span></div>
+            <div class="srow"><span class="lab">Construction &amp; civil costs +10%</span><span class="val">+$136K</span><span class="track"><i style="--w:83%;--d:.15s"></i></span></div>
+            <div class="srow"><span class="lab">End values &minus;5% &mdash; softer market</span><span class="val">+$94K</span><span class="track"><i style="--w:57%;--d:.25s"></i></span></div>
+            <div class="srow"><span class="lab">Both together &mdash; downside stress</span><span class="val">+$67K</span><span class="track"><i style="--w:41%;--d:.35s"></i></span></div>
+          </div>
+          <div class="dist">
+            <svg viewBox="0 0 600 180" role="img" aria-label="Net-equity distribution across 10,000 simulations: P10 $72k, P50 $164k, P90 $256k">
+              <path class="band" d="M142.2,91.9 L147.3,88.8 L152.4,85.6 L157.5,82.3 L162.5,79.0 L167.6,75.7 L172.7,72.4 L177.8,69.0 L182.9,65.7 L188.0,62.4 L193.1,59.1 L198.2,55.8 L203.3,52.6 L208.4,49.5 L213.5,46.4 L218.5,43.5 L223.6,40.6 L228.7,37.9 L233.8,35.3 L238.9,32.8 L244.0,30.5 L249.1,28.3 L254.2,26.4 L259.3,24.6 L264.4,23.0 L269.5,21.6 L274.5,20.5 L279.6,19.5 L284.7,18.8 L289.8,18.3 L294.9,18.1 L300.0,18.0 L305.1,18.2 L310.2,18.6 L315.3,19.3 L320.4,20.1 L325.5,21.2 L330.5,22.5 L335.6,24.1 L340.7,25.8 L345.8,27.7 L350.9,29.7 L356.0,32.0 L361.1,34.4 L366.2,37.0 L371.3,39.7 L376.4,42.5 L381.5,45.4 L386.5,48.5 L391.6,51.6 L396.7,54.7 L401.8,58.0 L406.9,61.3 L412.0,64.6 L417.1,67.9 L422.2,71.3 L427.3,74.6 L432.4,77.9 L437.5,81.2 L442.5,84.5 L447.6,87.7 L452.7,90.9 L452.7,150 L142.2,150 Z"/>
+              <path class="curve" d="M20.0,140.3 L25.1,139.3 L30.2,138.3 L35.3,137.2 L40.4,136.0 L45.5,134.7 L50.5,133.3 L55.6,131.8 L60.7,130.3 L65.8,128.6 L70.9,126.9 L76.0,125.0 L81.1,123.1 L86.2,121.0 L91.3,118.8 L96.4,116.6 L101.5,114.2 L106.5,111.7 L111.6,109.2 L116.7,106.5 L121.8,103.8 L126.9,100.9 L132.0,98.0 L137.1,95.0 L142.2,91.9 L147.3,88.8 L152.4,85.6 L157.5,82.3 L162.5,79.0 L167.6,75.7 L172.7,72.4 L177.8,69.0 L182.9,65.7 L188.0,62.4 L193.1,59.1 L198.2,55.8 L203.3,52.6 L208.4,49.5 L213.5,46.4 L218.5,43.5 L223.6,40.6 L228.7,37.9 L233.8,35.3 L238.9,32.8 L244.0,30.5 L249.1,28.3 L254.2,26.4 L259.3,24.6 L264.4,23.0 L269.5,21.6 L274.5,20.5 L279.6,19.5 L284.7,18.8 L289.8,18.3 L294.9,18.1 L300.0,18.0 L305.1,18.2 L310.2,18.6 L315.3,19.3 L320.4,20.1 L325.5,21.2 L330.5,22.5 L335.6,24.1 L340.7,25.8 L345.8,27.7 L350.9,29.7 L356.0,32.0 L361.1,34.4 L366.2,37.0 L371.3,39.7 L376.4,42.5 L381.5,45.4 L386.5,48.5 L391.6,51.6 L396.7,54.7 L401.8,58.0 L406.9,61.3 L412.0,64.6 L417.1,67.9 L422.2,71.3 L427.3,74.6 L432.4,77.9 L437.5,81.2 L442.5,84.5 L447.6,87.7 L452.7,90.9 L457.8,94.0 L462.9,97.0 L468.0,100.0 L473.1,102.8 L478.2,105.6 L483.3,108.3 L488.4,110.9 L493.5,113.4 L498.5,115.8 L503.6,118.1 L508.7,120.3 L513.8,122.4 L518.9,124.4 L524.0,126.3 L529.1,128.0 L534.2,129.7 L539.3,131.3 L544.4,132.8 L549.5,134.2 L554.5,135.5 L559.6,136.8 L564.7,137.9 L569.8,139.0 L574.9,140.0 L580.0,140.9"/>
+              <line class="axis" x1="20" y1="150" x2="580" y2="150"/>
+              <line class="pmark" x1="142.2" y1="91.9" x2="142.2" y2="150"/>
+              <line class="pmark" x1="298.3" y1="18" x2="298.3" y2="150"/>
+              <line class="pmark" x1="454.4" y1="90.9" x2="454.4" y2="150"/>
+              <g class="plab">
+                <text x="142.2" y="168" text-anchor="middle">P10 &middot; $72K</text>
+                <text x="298.3" y="168" text-anchor="middle">P50 &middot; $164K</text>
+                <text x="454.4" y="168" text-anchor="middle">P90 &middot; $256K</text>
+                <text class="dim" x="20" y="8">Net-equity distribution &mdash; 10,000 simulations</text>
+              </g>
+            </svg>
+          </div>
+          <p class="micro dist-note">Net-positive in 98.9% of simulations &middot; cost &plusmn;7% &middot; value &plusmn;5%</p>
+        </div>
+      </div>
+
+      <!-- STEP 05 -->
+      <div class="step rv">
+        <div class="side">
+          <span class="stepnum">05</span>
+          <h3>The verdict</h3>
+          <p class="body">Reconfigure the lot: keep the home, create the rear lot, sell it for ~$540K, repay the costs &mdash; and stay ahead even in the combined downside. This one is <b>feasible</b>.</p>
+        </div>
+        <div>
+          <div class="verdict-line">
+            <div class="vrow"><span class="k">Worth today, as-is</span><span class="big">$950K</span></div>
+            <div class="vrow"><span class="k">Realisable after the play</span><span class="big">$1.39M</span></div>
+            <div class="vrow"><span class="k">Net equity created</span><span class="big">+$164K</span></div>
+            <div class="vrow"><span class="k">Verdict</span><span class="big go">FEASIBLE</span></div>
+          </div>
+          <p class="micro verdict-note">Illustrative sample on a made-up address &mdash; figures indicative. Some properties come back &ldquo;don&rsquo;t&rdquo;. That answer is worth just as much.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= THE REPORT ================= -->
+  <section id="heq-report">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="k kick rv">The deliverable</span>
+        <h2 class="rvm"><span class="lw"><span class="line">Seventeen pages.</span></span><span class="lw"><span class="line">Every number traceable.</span></span></h2>
+        <p class="body rv d2">Your property, taken apart and put back together &mdash; what it&rsquo;s worth today, every path it could take, and the numbers behind the one that wins. <b>Here&rsquo;s a glimpse.</b></p>
+      </div>
+    </div>
+    <div class="strip rv">
+      <div class="page-card">
+        <div class="ph"><span>Tayloe Capital</span><span>Private</span></div>
+        <div class="cover-mid">
+          <span class="cover-logo"></span>
+          <h4>Hidden Equity Report</h4>
+          <span class="tag">27 Jacaranda Street, Marsden QLD</span>
+        </div>
+        <div class="pf"><span>Illustrative sample</span><span>01</span></div>
+      </div>
+      <div class="page-card">
+        <div class="ph"><span>Hidden Equity Report</span><span>Private</span></div>
+        <h4>Executive Summary</h4>
+        <span class="tag">The verdict on your property</span>
+        <div class="mini-stat"><span class="ms-k">Unlockable value identified</span><span class="bigval">$164,000</span></div>
+        <div class="mini-row"><span>Current value, as-is</span><b>$950K</b></div>
+        <div class="mini-row"><span>Realisable after the play</span><b>$1.39M</b></div>
+        <div class="mini-row"><span>Net-positive outcomes</span><b>98.9%</b></div>
+        <div class="mini-row"><span>Hidden Equity Score</span><b>100 / 100</b></div>
+        <div class="pf"><span>Illustrative sample</span><span>02</span></div>
+      </div>
+      <div class="page-card">
+        <div class="ph"><span>Hidden Equity Report</span><span>Private</span></div>
+        <h4>Highest &amp; Best Use</h4>
+        <span class="tag">Every pathway, honestly compared</span>
+        <div class="mini-row"><span>Reconfiguring a lot &mdash; recommended</span><b class="gr">+$164K</b></div>
+        <div class="mini-row"><span>Secondary dwelling</span><b>+$2K</b></div>
+        <div class="mini-row"><span>KDR duplex &mdash; does not stack</span><b>&minus;$743K</b></div>
+        <div class="mini-row"><span>Basis</span><b>Rate card + comps</b></div>
+        <div class="mini-row"><span>Council charges applied</span><b>$38K / lot</b></div>
+        <div class="pf"><span>Illustrative sample</span><span>06</span></div>
+      </div>
+      <div class="page-card">
+        <div class="ph"><span>Hidden Equity Report</span><span>Private</span></div>
+        <h4>Sensitivity</h4>
+        <span class="tag">Does it still stack under stress?</span>
+        <div class="mini-row"><span>Costs +10%</span><b>+$136K</b></div>
+        <div class="mini-row"><span>Values &minus;5%</span><b>+$94K</b></div>
+        <div class="mini-row"><span>Combined downside</span><b>+$67K</b></div>
+        <div class="mini-row"><span>P10 / P50 / P90</span><b>$72K / $164K / $256K</b></div>
+        <div class="mini-row"><span>Simulations</span><b>10,000</b></div>
+        <div class="pf"><span>Illustrative sample</span><span>11</span></div>
+      </div>
+      <div class="page-card tease">
+        <div class="tease-mid">
+          <span class="tease-num">+13</span>
+          <span class="tease-lab">More pages &mdash;<br>yours with the report</span>
+        </div>
+      </div>
+    </div>
+    <div class="strip-note">
+      <span class="micro">Drag to see more <b>&rarr;</b></span>
+      <span class="micro">Plus a short video walkthrough of your result</span>
+    </div>
+  </section>
+
+  <!-- ================= METHOD ================= -->
+  <section id="heq-method">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="k kick rv">Methodology</span>
+        <h2 class="rvm"><span class="lw"><span class="line">Computed.</span></span><span class="lw"><span class="line">Not guessed.</span></span></h2>
+      </div>
+      <div class="method-grid rv">
+        <div>
+          <span class="num">01</span>
+          <h3>The address register</h3>
+          <p>Your address is resolved against the state&rsquo;s official register to one certain lot and plan &mdash; an exact match, or we come back to you. The analysis is never built on a geocoder&rsquo;s best guess.</p>
+        </div>
+        <div>
+          <span class="num">02</span>
+          <h3>Cadastre &amp; overlays</h3>
+          <p>Land, dimensions, zoning, precinct &mdash; and every planning overlay tested against your parcel&rsquo;s actual polygon. Affected, partial or clear: each result is dated and printed in the report.</p>
+        </div>
+        <div>
+          <span class="num">03</span>
+          <h3>Rate card</h3>
+          <p>A current construction and civil-works rate card maintained from real SEQ building experience. Costing the build is the rare part.</p>
+        </div>
+        <div>
+          <span class="num">04</span>
+          <h3>Comparable evidence</h3>
+          <p>End values anchored to recent, verified sales near your property &mdash; the same evidence a valuer relies on. The model never invents a sale price.</p>
+        </div>
+        <div>
+          <span class="num">05</span>
+          <h3>Simulation</h3>
+          <p>Scenario stress plus 10,000 simulated combinations of cost and value movement &mdash; the verdict comes with its full P10&nbsp;/&nbsp;P50&nbsp;/&nbsp;P90 range, not a single hopeful number.</p>
+        </div>
+        <div>
+          <span class="num">06</span>
+          <h3>The final read</h3>
+          <p>The computation is the start, not the verdict. Every report is read, challenged and signed off by a person before it reaches you.</p>
+        </div>
+      </div>
+      <p class="micro coverage rv">Overlay audits run automatically for <b>Logan &middot; Brisbane &middot; Gold Coast &middot; Moreton Bay</b> &mdash; everywhere else in Australia we check by hand. Same report, same evidence.</p>
+      <div class="backtest rv">
+        <p>Completed projects on the same play in this market delivered <b>$80K&ndash;$220K</b>. The modelled uplift sits inside the observed band.</p>
+        <span class="anton">Backtested.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFER ================= -->
+  <section id="heq-offer">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="k kick rv">The engagement</span>
+        <h2 class="rvm"><span class="lw"><span class="line">You enquire. We look.</span></span><span class="lw"><span class="line">Then you decide.</span></span></h2>
+      </div>
+      <div class="steps3 rv">
+        <div>
+          <span class="num">01</span>
+          <h3>Enquire</h3>
+          <p>Send the property and your email. No payment, no deposit, no obligation &mdash; that&rsquo;s the whole first step.</p>
+        </div>
+        <div>
+          <span class="num">02</span>
+          <h3>We analyse &amp; get in touch</h3>
+          <p>We run the property end to end and come back to you within five business days with a straight answer: promising, or not.</p>
+        </div>
+        <!-- PRICE appears here, in the hero copy, and in the Terms row — three spots to edit -->
+        <div>
+          <span class="num">03</span>
+          <h3>You decide</h3>
+          <p>If you want the full report, it&rsquo;s $760 &mdash; you pay then, and the document and its video walkthrough are yours.</p>
+        </div>
+      </div>
+      <div class="terms rv">
+        <div><b>$760</b>Flat fee, fixed</div>
+        <div><b>$0</b>To enquire &mdash; no deposit</div>
+        <div><b>5 days</b>To hear back from us</div>
+        <div><b>AUS</b>Australia-wide</div>
+      </div>
+      <div class="honest rv">
+        <h3>If it doesn&rsquo;t stack, we say so.</h3>
+        <p class="body">The report&rsquo;s promise is honesty, not a rosy number. If the numbers don&rsquo;t work, it says so plainly, with the evidence &mdash; <b>a defensible &ldquo;walk away&rdquo; can save you a six-figure mistake.</b> And if we don&rsquo;t think the analysis is worth paying for, we&rsquo;ll tell you before you&rsquo;ve spent a cent.</p>
+      </div>
+      <div class="forlist rv">
+        <div>
+          <h4>For</h4>
+          <p>Owners of Australian property that might subdivide, add a dwelling, or develop &mdash; and want the real numbers before committing to anything.</p>
+        </div>
+        <div>
+          <h4>Not for</h4>
+          <p>Seasoned developers who already run their own feasibilities. You have this covered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ENQUIRE ================= -->
+  <section id="heq-enquire">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="k kick rv">Start</span>
+        <h2 class="rvm"><span class="lw"><span class="line">Find my</span></span><span class="lw"><span class="line">hidden equity.</span></span></h2>
+        <p class="body rv d2">Send the address and your email. Within five business days we come back with a straight answer &mdash; promising or not &mdash; before you pay anything.</p>
+      </div>
+      <form id="heq-form" class="rv" novalidate>
+        <div class="field">
+          <label for="heq-addr">Property address</label>
+          <input type="text" id="heq-addr" name="address" placeholder="Street, suburb, state" autocomplete="street-address">
+        </div>
+        <div class="field">
+          <label for="heq-email">Email</label>
+          <input type="email" id="heq-email" name="email" placeholder="you@email.com" autocomplete="email" required>
+        </div>
+        <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit">Send the enquiry<b>&rarr;</b></button>
+        <p id="heq-note" role="status"></p>
+      </form>
+      <p class="micro enq-micro">No obligation &middot; no deposit &middot; pay only if you want the report</p>
+      <p class="micro enq-micro">By enquiring you agree to our <a class="legal-link" href="/privacy">privacy policy</a> and <a class="legal-link" href="/terms">terms</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="fbrand" href="/" data-wipe aria-label="Tayloe Capital — home">
+      <span class="logo-ink"></span>
+      <span class="brand-name">Tayloe Capital</span>
+    </a>
+    <p class="legal">Independent factual analysis of property you own &mdash; not financial, credit or property advice, and not a valuation. Sample figures illustrative and indicative only. Works are subject to council approval. &copy; 2026 Tayloe Capital.</p>
+    <p class="legal legal-links"><a class="legal-link" href="/privacy">Privacy</a> &middot; <a class="legal-link" href="/terms">Terms</a> &middot; <a class="legal-link" href="/store-terms">Store terms</a></p>
+  </footer>
+
+  <div id="heq-wipe"></div>
+
+</div>
+<script>
+/* escape any transformed Squarespace ancestor, then flatten the leftover
+   Squarespace sections (multi-viewport min-heights would add dead scroll) */
+(() => {
+  const root = document.getElementById('heq');
+  if (root && root.parentElement !== document.body) document.body.appendChild(root);
+  document.querySelectorAll('#page .page-section, #page section').forEach(s => {
+    ['min-height', 'height', 'padding'].forEach(p => s.style.setProperty(p, p === 'height' ? '0px' : '0', 'important'));
+    s.style.setProperty('overflow', 'hidden', 'important');
+  });
+  const sw = document.getElementById('siteWrapper');
+  if (sw) sw.style.setProperty('min-height', '0', 'important');
+})();
+
+(() => {
+  /* embed-safe root: the Squarespace build wraps everything in #heq */
+  const root = document.getElementById('heq') || document;
+  const $ = id => document.getElementById(id);
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fx = matchMedia('(pointer: fine)').matches && !reduceMotion;
+  const GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&';
+
+  /* ---------- arrive through the green wipe, leave through it ---------- */
+  const wipe = $('heq-wipe');
+  const back = $('heq-back');
+  const brand = $('heq-brand');
+  let revealGate = false, unveiled = false;
+  function unveil() {
+    if (unveiled) return;
+    unveiled = true;
+    wipe.classList.add('out');
+    back.classList.add('on');
+    brand.classList.add('on', 'go');   /* the dog draws itself on */
+    setTimeout(() => { revealGate = true; }, reduceMotion ? 0 : 260);
+  }
+  if (reduceMotion) unveil();
+  else requestAnimationFrame(() => requestAnimationFrame(unveil));
+  setTimeout(unveil, 1200);   /* never leave the page covered */
+
+  let wiping = false;
+  root.querySelectorAll('[data-wipe]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href || reduceMotion || wiping) return;
+      e.preventDefault();
+      wiping = true;
+      wipe.classList.remove('out');
+      wipe.classList.add('go');
+      setTimeout(() => { location.href = href; }, 520);
+    });
+  });
+
+  /* ---------- BACK hover = the brand's tiny decode ---------- */
+  Promise.race([
+    document.fonts.load('13px AntonTC'),
+    new Promise(r => setTimeout(r, 2500))
+  ]).then(() => {
+    const scr = back.querySelector('.scr');
+    const txt = scr.textContent.trim();
+    const cv = document.createElement('canvas').getContext('2d');
+    cv.font = getComputedStyle(back).fontSize + ' AntonTC';
+    scr.textContent = '';
+    const ss = [...txt].map(ch => {
+      const s = document.createElement('span');
+      s.style.width = cv.measureText(ch).width + 'px';
+      s.textContent = ch;
+      scr.appendChild(s);
+      return s;
+    });
+    let running = false;
+    back.addEventListener('mouseenter', () => {
+      if (running || reduceMotion) return;
+      running = true;
+      const s0 = performance.now();
+      const settle = setTimeout(() => {
+        ss.forEach((s, i) => s.textContent = txt[i]);
+        running = false;
+      }, 900);
+      (function tick() {
+        const t = performance.now() - s0;
+        let done = true;
+        ss.forEach((s, i) => {
+          if (t > 90 + i * 55) s.textContent = txt[i];
+          else { done = false; s.textContent = GLYPHS[(Math.random() * GLYPHS.length) | 0]; }
+        });
+        if (!done) requestAnimationFrame(tick);
+        else { running = false; clearTimeout(settle); }
+      })();
+    });
+  });
+
+  /* ---------- SecondOrderDynamics — the hero title's gentle drift ---------- */
+  class SOD {
+    constructor(f, z, r, x0) {
+      const w = 2 * Math.PI * f;
+      this.k1 = z / (Math.PI * f);
+      this.k2 = 1 / (w * w);
+      this.k3 = r * z / w;
+      this.xp = x0; this.y = x0; this.yd = 0;
+    }
+    update(dt, x) {
+      const xd = (x - this.xp) / dt; this.xp = x;
+      const k2s = Math.max(this.k2, dt * dt / 2 + dt * this.k1 / 2, dt * this.k1);
+      this.y += dt * this.yd;
+      this.yd += dt * (x + this.k3 * xd - this.y - this.k1 * this.yd) / k2s;
+      return this.y;
+    }
+  }
+  const pX = new SOD(1.6, .9, 0, 0), pY = new SOD(1.6, .9, 0, 0);
+  let mx = innerWidth / 2, my = innerHeight / 2, mouseSeen = false;
+  addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; mouseSeen = true; }, { passive: true });
+
+  /* gentle tilt on the report page-cards (the /home card treatment) */
+  const cards = [...root.querySelectorAll('.page-card')].map(el => {
+    const c = { el, rx: 0, ry: 0, trx: 0, tryy: 0 };
+    if (fx) {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        c.tryy = ((e.clientX - r.left) / r.width - .5) * 5;
+        c.trx  = (.5 - (e.clientY - r.top) / r.height) * 4;
+      });
+      el.addEventListener('mouseleave', () => { c.trx = 0; c.tryy = 0; });
+    }
+    return c;
+  });
+
+  /* ---------- scroll is the master clock — polled, self-healing ----------
+     (events and observers die in occluded tabs; the loop never does) */
+  const hero = $('heq-hero');
+  const heroTitle = hero.querySelector('h1');
+  const progress = $('heq-progress');
+  const ghostsEl = $('heq-ghosts');
+  const gd = ghostsEl.children[0], ge = ghostsEl.children[1];
+  const enq = $('heq-enquire');
+  const rvs = [...root.querySelectorAll('.rv,.rvm')].map(el => ({ el, top: 0, done: false }));
+
+  let enqTop = 0;
+  const foot = root.querySelector('footer');
+  function measure() {
+    /* size the ghost layer to the CONTENT bottom, not scrollHeight — the
+       layer itself feeds scrollHeight, so sizing from it ratchets in any
+       host page whose shell settles after init (the Squarespace embed) */
+    const footBottom = foot.getBoundingClientRect().bottom + scrollY;
+    ghostsEl.style.height = Math.max(innerHeight, Math.round(footBottom)) + 'px';
+    /* the granite wall straddles the offer → enquire fold */
+    enqTop = enq.getBoundingClientRect().top + scrollY;
+    ge.style.top = Math.max(0, enqTop - innerHeight * 0.55) + 'px';
+    rvs.forEach(r => {
+      if (r.done) return;
+      const prev = r.el.style.transform;
+      r.top = r.el.getBoundingClientRect().top + scrollY;
+      void prev;
+    });
+  }
+  measure();
+  addEventListener('resize', measure);
+  document.fonts.ready.then(measure);
+
+  let lastStep = 0, lastT = 0, frameN = 0;
+  function step(catchUp) {
+    const now = performance.now();
+    const dt = Math.min(.05, Math.max(.001, (now - lastT) / 1000)); lastT = now;
+    lastStep = now;
+    if (++frameN % 60 === 0) measure();
+
+    /* green thread */
+    const maxS = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    progress.style.transform = `scaleX(${(scrollY / maxS).toFixed(4)})`;
+
+    /* reveals — polled, no IntersectionObserver */
+    if (revealGate) {
+      const line = scrollY + innerHeight * 0.85;
+      rvs.forEach(r => {
+        if (!r.done && r.top < line) { r.done = true; r.el.classList.add('in'); }
+      });
+    }
+
+    /* ghost parallax — scroll-tied only, like /home. The wall's drift is
+       relative to its own arrival (absolute scrollY would move it hundreds
+       of px on a page this tall and empty its seam before you get there) */
+    if (!reduceMotion) {
+      gd.style.transform = `translate3d(0,${(scrollY * .1).toFixed(1)}px,0)`;
+      const rel = Math.max(0, scrollY - (enqTop - innerHeight));
+      ge.style.transform = `translate3d(0,${(-rel * .08).toFixed(1)}px,0)`;
+    }
+
+    if (fx && mouseSeen) {
+      heroTitle.style.setProperty('--px', pX.update(dt, (mx / innerWidth - .5) * 9).toFixed(2) + 'px');
+      heroTitle.style.setProperty('--py', pY.update(dt, (my / innerHeight - .5) * 6).toFixed(2) + 'px');
+      cards.forEach(c => {
+        c.rx += (c.trx - c.rx) * .12; c.ry += (c.tryy - c.ry) * .12;
+        c.el.style.setProperty('--rx', c.rx.toFixed(2) + 'deg');
+        c.el.style.setProperty('--ry', c.ry.toFixed(2) + 'deg');
+      });
+    }
+    void catchUp;
+  }
+  function frame() { step(false); requestAnimationFrame(frame); }
+  requestAnimationFrame(frame);
+  setInterval(() => { if (performance.now() - lastStep > 400) step(true); }, 300);
+
+  /* ---------- enquiry form ----------
+     Same Apps Script web app as the homepage waitlist. Sends the full
+     enquiry payload (type/name/topic/message). NOTE: until the enquiry-
+     route Code.gs (~/tc-landing/integrations/Code.gs) is deployed at this
+     URL, the deployed script stores the EMAIL ONLY (subscriber list) and
+     drops the address — the console warning below makes that loud. */
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbw4XAd3rgJ1M2yg-tzrtRAV-7DA-Dc3dg5PA1TIZRrWwY5JTTgyfdlNCZN66HU6lJfx/exec';
+  const form = $('heq-form');
+  const note = $('heq-note');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const email = form.email.value.trim();
+    const address = form.address.value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      note.textContent = 'ENTER A VALID EMAIL';
+      note.classList.remove('ok');
+      return;
+    }
+    const btn = form.querySelector('button');
+    btn.disabled = true;
+    note.classList.remove('ok');
+    note.textContent = 'SENDING…';
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+          type: 'enquiry',
+          email,
+          name: address,
+          topic: 'hidden-equity',
+          message: 'Hidden Equity Report enquiry — ' + (address || 'no address given'),
+          hp: form.hp.value || ''
+        })
+      });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'rejected');
+      if (data.status !== 'enquiry_received') {
+        console.warn('[heq] enquiry route NOT deployed — email captured, address dropped. Deploy ~/tc-landing/integrations/Code.gs to this web app.');
+      }
+      form.reset();
+      note.textContent = 'RECEIVED — WE’LL BE IN TOUCH WITHIN FIVE BUSINESS DAYS.';
+      note.classList.add('ok');
+    } catch {
+      note.textContent = 'SOMETHING BROKE — PLEASE TRY AGAIN.';
+      note.classList.remove('ok');
+    }
+    btn.disabled = false;
+  });
+})();
+</script>
